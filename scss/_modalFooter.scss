@@ -1,0 +1,57 @@
+.modal-footer {
+    width: 100%;
+    background-image: url(../items/skelatal_weave.png);
+    margin-top: 40px;
+    position: relative;
+    padding-top: 3px;
+    padding-bottom: 25px;
+//    border: 1px solid green;
+    .user-photo {
+        position: absolute;
+        left: 47%;
+        top: -26px;
+    }
+    p {
+        font-size: 11px;
+        margin-bottom: 2px;
+        span {
+            padding-right: 6px;
+        }
+    }
+    h4 {
+        font-family: $main-serif-font;
+        font-size: 21px;
+        font-weight: 800;
+        color: $color-blue-dark; 
+        text-align: center;
+        margin-bottom: 25px;
+        letter-spacing: 1px;
+    }
+}
+
+
+.footer-statistics-container {
+    display: flex;
+    justify-content: space-around;
+    width: 67%;
+    margin: 0 auto;
+}
+
+
+.footer-statistics-box {
+    text-align: center;
+    color: $color-grey-dark;
+    font-size: 14px;
+    font-weight: 800;
+    font-family: $main-serif-font;
+    letter-spacing: 1px;
+    span {
+        padding-right: 6px;
+        font-family: $main-sans-serif-font, sans-serif;
+        font-size: 16px;
+        font-weight: bold;
+    }
+}
+
+
+

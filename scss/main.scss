@@ -1,0 +1,15 @@
+
+@import "reset";
+@import "fonts";
+@import "variables";
+@import "containers";
+@import "modalHeader";
+@import "modalContent";
+@import "modalFooter";
+
+
+body {
+    //do wymiany
+    font-family: "lunchtype22regular", sans-serif;
+    background-color: $color-main-orange;
+}
