@@ -19,13 +19,9 @@
         }
     }
     h4 {
-        font-family: $main-serif-font;
         font-size: 21px;
-        font-weight: 800;
-        color: $color-blue-dark; 
         text-align: center;
         margin-bottom: 25px;
-        letter-spacing: 1px;
     }
 }
 
@@ -39,16 +35,10 @@
 
 
 .footer-statistics-box {
-    text-align: center;
-    color: $color-grey-dark;
+    @include acivitiesFontStyle;
     font-size: 14px;
-    font-weight: 800;
-    font-family: $main-serif-font;
-    letter-spacing: 1px;
     span {
         padding-right: 6px;
-        font-family: $main-sans-serif-font, sans-serif;
-        font-size: 16px;
         font-weight: bold;
     }
 }
