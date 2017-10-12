@@ -6,11 +6,7 @@
 //    border-top-width: 0;
 //    border-bottom-width: 40px;
     box-shadow: 7px 0 5px -4px $color-main-orange-shadow;
-    .container {
-        box-shadow: 9px 0 5px -6px $color-grey-white;
-        border-left: $border-style;
-        border-right: $border-style;
-    }
+    border-bottom: 1px solid $color-main-background;
 }
 
 
@@ -18,8 +14,16 @@
     width: 900px;
 //    width: 70%;
     margin: 0 auto;
-//    border: 1px solid red;
     background-color: #fff;
+    box-shadow: 9px 0 5px -6px $color-grey-white;
+    border-left: $border-style;
+    border-right: $border-style;
 }
 
 
+
+ .modal-container {
+    width: 70%;
+    margin: 0 auto;
+    background-color: #fff;
+    }

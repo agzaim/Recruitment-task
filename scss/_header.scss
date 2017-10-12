@@ -1,11 +1,13 @@
 header {
     background-color: #fff;
     width: 100%;
-//    position: relative;
+    //    position: relative;
     z-index: 1;
     padding-top: 30px;
     padding-bottom: 19px;
     .container {
+        border: 0;
+        box-shadow: 0 0 0 0;
         //        width: 67%;
         div {
             display: inline-block;
@@ -15,13 +17,20 @@ header {
         display: inline-block;
         font-size: 29px;
     }
+    p {
+        //    border: 1px solid blue;
+        font-family: $main-serif-font;
+        display: inline-block;
+        float: right;
+        margin-top: 9px;
+    }
 }
 
 .left-arrow {
-//    float: left;
-//    margin-left: 65px;
+    //    float: left;
+    //    margin-left: 65px;
     position: absolute;
-//    display: inline-block;
+    //    display: inline-block;
     width: 40px;
     height: 40px;
     left: -145px;
@@ -40,16 +49,15 @@ header {
 }
 
 .plus-mark {
-    height: 28px;
-    width: 28px;
+   height: 26px;
+    width: 26px;
     border-radius: 50%;
-    background-color: $color-blue-dark;
+    background-color: #0266b3;
     color: #fff;
-    font-size: 28px;
+    font-size: 26px;
     text-align: center;
-    line-height: 28px;
-    //    font-family: "Times New Roman", serif;
-    font-family: "Arial", serif;
+    line-height: 27px;
+    font-family: "Palatino", serif;
     margin-left: 28px;
     font-weight: 100;
 }
@@ -64,29 +72,23 @@ input[type="radio"] {
     margin-left: 26px;
 }
 
-.header-sorting-box {
-//    border: 1px solid blue;
-    font-family: $main-serif-font;
-    display: inline-block;
-    float: right;
-    margin-top: 9px;
-    a {
-        margin-left: 7px;
-        color: $color-blue-dark;
-        font-weight: bold;
-        &:active {
-            text-decoration: underline;
-            color: $color-grey-light;
-        }
-        &:hover {
-            opacity: 0.5;
-        }
-        &:first-child {
-            margin-right: 7px;
-        }
+
+.sorting-choice {
+    margin-left: 7px;
+    color: $color-blue-dark;
+    font-weight: bold;
+    &:active {
+        text-decoration: underline;
+        color: $color-grey-light;
     }
-    //        width: 26%;
+    &:hover {
+        opacity: 0.5;
+    }
+    &:first-child {
+        margin-right: 7px;
+    }
 }
+
 
 .search-input {
     width: 73%;
