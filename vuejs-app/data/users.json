@@ -1,0 +1,129 @@
+{
+    "users": [
+        {
+            "userName": "Patricia",
+            "userPhoto": "user1.png",
+            "membershipPeriod": "6 months",
+            "lastVisit": "Sunday afternoon",
+            "activityLevel": "2",
+            "peersNumber": "76",
+            "discussionNumber": "45",
+            "findingsNumber": "15",
+            "questionNumber": "8",
+            "otherPeers": [
+                {
+                    "userName": "Marie",
+                    "userPhoto": "user4.png"
+                },
+                {
+                    "userName": "Sofia",
+                    "userPhoto": "user5.png"
+                },
+                {
+                    "userName": "Joseph",
+                    "userPhoto": "user3.png"
+                }
+            ]
+        },
+        {
+            "userName": "Dr. Mark",
+            "userPhoto": "user2.png",
+            "membershipPeriod": "1 year",
+            "lastVisit": "Last Friday",
+            "activityLevel": "3",
+            "peersNumber": "81",
+            "discussionNumber": "58",
+            "findingsNumber": "21",
+            "questionNumber": "11",
+            "otherPeers": [
+                {
+                    "userName": "Patricia",
+                    "userPhoto": "user1.png"
+                },
+                {
+                    "userName": "Joseph",
+                    "userPhoto": "user3.png"
+                },
+                {
+                    "userName": "Sofia",
+                    "userPhoto": "user5.png"
+                }
+            ]
+        },
+        {
+            "userName": "Joseph",
+            "userPhoto": "user3.png",
+            "membershipPeriod": "3 months",
+            "lastVisit": "Monday morning",
+            "activityLevel": "1",
+            "peersNumber": "43",
+            "discussionNumber": "19",
+            "findingsNumber": "19",
+            "questionNumber": "2",
+            "otherPeers": [
+                {
+                    "userName": "Marie",
+                    "userPhoto": "user4.png"
+                },
+                {
+                    "userName": "Patricia",
+                    "userPhoto": "user1.png"
+                },
+                {
+                    "userName": "Dr. Mark",
+                    "userPhoto": "user2.png"
+                }
+            ]
+        },
+        {
+            "userName": "Marie",
+            "userPhoto": "user4.png",
+            "membershipPeriod": "7 months",
+            "lastVisit": "Last month",
+            "activityLevel": "1",
+            "peersNumber": "23",
+            "discussionNumber": "12",
+            "findingsNumber": "43",
+            "questionNumber": "4",
+            "otherPeers": [
+                {
+                    "userName": "Dr. Mark",
+                    "userPhoto": "user2.png"
+                },
+                {
+                    "userName": "Joseph",
+                    "userPhoto": "user3.png"
+                },
+                {
+                    "userName": "Sofia",
+                    "userPhoto": "user5.png"
+                }
+            ]
+        },
+        {
+            "userName": "Sofia",
+            "userPhoto": "user5.png",
+            "membershipPeriod": "2 years",
+            "lastVisit": "Saturday evening",
+            "activityLevel": "3",
+            "peersNumber": "98",
+            "discussionNumber": "67",
+            "findingsNumber": "29",
+            "questionNumber": "31",
+            "otherPeers": [
+                {
+                    "userName": "Patricia",
+                    "userPhoto": "user1.png"
+                },
+                {
+                    "userName": "Dr. Mark",
+                    "userPhoto": "user2.png"
+                },
+                {
+                    "userName": "Marie",
+                    "userPhoto": "user4.png"
+                }
+            ]
+        }
+    ]
+}
