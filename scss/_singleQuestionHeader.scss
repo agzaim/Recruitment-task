@@ -1,5 +1,8 @@
 .discussion-timer {
     @include acivitiesFontStyle;
+//    display: inline-block;
+    padding-top: 10px;
+    float: right;
     @include tabletsOnly {
         padding-right: 15px;
     }

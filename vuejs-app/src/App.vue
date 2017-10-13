@@ -26,6 +26,7 @@
 import allQuestions from "./components/allQuestions.vue";
 import singleQuestion from "./components/singleQuestion.vue";
 import profileView from "./components/profileView.vue";
+import usersData from "./data/users.json";
     
     
 export default {
@@ -33,13 +34,13 @@ export default {
         "allQuestions": allQuestions,
         "singleQuestion": singleQuestion,
         "profileView": profileView
+    },
+
+  data() {
+    return {
+    users: usersData
     }
-//  name: 'app',
-//  data () {
-//    return {
-////      msg: 'Welcome to Your Vue.js App'
-//    }
-//  }
+  }
 }
 
 </script>
