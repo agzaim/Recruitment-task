@@ -43,6 +43,17 @@
     background-position: center;
     background-size: cover;
     margin: 0 auto;
+    @include hoverEffect;
+}
+
+
+.user-name {
+    font-size: 16px;
+    text-align: center;
+    color: $color-blue-dark;
+    font-family: $sans-serif-medium-font;
+    text-transform: none;
+    @include hoverEffect;
 }
 
 
@@ -76,7 +87,7 @@ h4 {
     //    width: 105px;
     width: 15%;
     position: relative;
-//    border: 1px solid green;
+    //    border: 1px solid green;
     &:first-child {
         margin-top: 0;
         background-color: $color-blue-light;
@@ -153,8 +164,6 @@ h4 {
     color: #e1173f;
     font-size: 18px;
     font-weight: 800;
-    &:hover {
-        opacity: 0.5;
-    }
+    @include hoverEffect;
 }
 

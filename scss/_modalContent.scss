@@ -37,7 +37,10 @@
     margin: 42px auto;
     display: flex;
     justify-content: space-around;
-//    border: 1px solid green;
+    flex-wrap: wrap;
+    @include mobiles {
+        width: 220px;
+    }
 }
 
 
@@ -91,6 +94,9 @@
     justify-content: space-between;
     margin: 0 auto;
     margin-bottom: 20px;
+    @include mobiles {
+        width: 80%;
+    }
 }
 
 
@@ -104,11 +110,4 @@
 }
 
 
-.user-name {
-    font-size: 16px;
-    text-align: center;
-    color: $color-blue-dark;
-    font-family: $sans-serif-medium-font;
-    text-transform: none;
-}
 

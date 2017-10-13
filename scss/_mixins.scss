@@ -13,5 +13,31 @@
     }
 }
 
+@mixin hoverEffect {
+    &:hover {
+        cursor: pointer;
+        opacity: 0.5;
+    }
+}
 
+@mixin tablets {
+//    @media screen and (max-width: 765px) {
+    @media screen and (max-width: 915px) {
+        @content;
+    }
+}
+
+@mixin tabletsOnly {
+//    @media screen and (max-width: 765px) {
+    @media screen and (max-width: 915px) and (min-width: 651px) {
+        @content;
+    }
+}
+
+@mixin mobiles {
+    @media screen and (max-width: 650px) {
+//    @media screen and (max-width: 700px) {
+        @content;
+    }
+}
  

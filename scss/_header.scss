@@ -5,9 +5,16 @@ header {
     z-index: 1;
     padding-top: 30px;
     padding-bottom: 19px;
+    @include mobiles {
+        padding-top: 10px;
+        padding-bottom: 0;
+    }
     .container {
         border: 0;
         box-shadow: 0 0 0 0;
+        @include mobiles {
+            padding-bottom: 0;
+        }
         //        width: 67%;
         div {
             display: inline-block;
@@ -16,13 +23,13 @@ header {
     h3 {
         display: inline-block;
         font-size: 29px;
-    }
-    p {
-        //    border: 1px solid blue;
-        font-family: $main-serif-font;
-        display: inline-block;
-        float: right;
-        margin-top: 9px;
+        p {
+            //    border: 1px solid blue;
+            font-family: $main-serif-font;
+            display: inline-block;
+            float: right;
+            margin-top: 9px;
+        }
     }
 }
 
@@ -41,15 +48,35 @@ header {
     line-height: 40px;
     font-family: Courier, sans-serif;
     border-radius: 50%;
+    @include tablets {
+        position: static;
+        margin-right: 45px;
+    }
+    @include mobiles {
+        height: 26px;
+        width: 26px;
+        font-size: 25px;
+        line-height: 26px;
+    }
+    &:hover {
+        background-color: $color-grey-light;
+        color: #fff;
+        cursor: pointer;
+    }
 }
+
 
 .header-title-box {
     position: relative;
     width: 46%;
+    @include tablets {
+        padding-left: 25px;
+    }
 }
 
+
 .plus-mark {
-   height: 26px;
+    height: 26px;
     width: 26px;
     border-radius: 50%;
     background-color: #0266b3;
@@ -60,7 +87,9 @@ header {
     font-family: "Palatino", serif;
     margin-left: 28px;
     font-weight: 100;
+    @include hoverEffect;
 }
+
 
 .sorting-choice {
     font-family: "lunchtype22regular", sans-serif;
