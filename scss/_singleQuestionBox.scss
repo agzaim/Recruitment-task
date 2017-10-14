@@ -9,41 +9,41 @@
             //            border-top: 1px solid $color-grey-light;
             box-shadow: 0 8px 7px -7px $color-grey-light inset;
         }
-    }
-    .question-box-header-content {
         @include mobiles {
-//            display: block;
-            P {
-//                display: inline-block;
+            padding: 0;
+        }
+        p {
+            padding-left: 95px;
+            @include mobiles {
+                padding: 35px 0 26px 85px;
             }
         }
     }
+    .user-photo {
+        position: absolute;
+        left: 2%;
+        top: 20px;
+    }
     h4 {
+        padding-left: 95px;
         @include mobiles {
-            width: 100%;
+            padding: 10px;
+            padding-left: 20px;
+            border-top: 1px solid white;
+            text-align: center;
         }
     }
 }
 
 
 .unfollow-btn {
-    //    display: inline-block;
-    //    font-weight: bold;
-    //    color: $color-blue-dark;
-    //    float: right;
-    //    margin-right: 36px;
-    //    margin-top: 20px;
-    //    @include hoverEffect;
-
-
     position: absolute;
     top: 35px;
     right: 70px;
     font-weight: bold;
     color: $color-blue-dark;
     height: 20px;
-
-        @include hoverEffect;
+    @include hoverEffect;
     @include tabletsOnly {
         right: 40px;
     }
@@ -94,7 +94,7 @@
     margin: 0 auto;
     @include mobiles {
         justify-content: flex-end;
-        padding: 0 15px 45px 0;
+        padding: 10px 15px 40px 0;
     }
     p {
         @include acivitiesFontStyle;
@@ -138,6 +138,9 @@
     &:hover {
         background-color: $color-blue-light;
         cursor: pointer;
+    }
+    @include mobiles {
+        left: 34%;
     }
 }
 

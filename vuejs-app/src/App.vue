@@ -35,6 +35,8 @@ export default {
         "singleQuestion": singleQuestion,
         "profileView": profileView
     },
+    
+    
 
   data() {
     return {
