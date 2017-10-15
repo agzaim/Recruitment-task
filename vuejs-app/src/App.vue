@@ -1,49 +1,61 @@
 <template>
-  <div id="app">
-      <allQuestions></allQuestions>
-<!--
-    <img src="./assets/logo.png">
-    <h1>{{ msg }}</h1>
-    <h2>Essential Links</h2>
-    <ul>
-      <li><a href="https://vuejs.org" target="_blank">Core Docs</a></li>
-      <li><a href="https://forum.vuejs.org" target="_blank">Forum</a></li>
-      <li><a href="https://gitter.im/vuejs/vue" target="_blank">Gitter Chat</a></li>
-      <li><a href="https://twitter.com/vuejs" target="_blank">Twitter</a></li>
+<div id="app">
+    <!--      <profileView></profileView>-->
+    <allQuestions v-bind:questions="questions"></allQuestions>
+
+
+    <!--
+<img src="./assets/logo.png">
+<h1>{{ msg }}</h1>
+<h2>Essential Links</h2>
+<ul>
+<li><a href="https://vuejs.org" target="_blank">Core Docs</a></li>
+<li><a href="https://forum.vuejs.org" target="_blank">Forum</a></li>
+<li><a href="https://gitter.im/vuejs/vue" target="_blank">Gitter Chat</a></li>
+<li><a href="https://twitter.com/vuejs" target="_blank">Twitter</a></li>
     </ul>
-    <h2>Ecosystem</h2>
-    <ul>
-      <li><a href="http://router.vuejs.org/" target="_blank">vue-router</a></li>
-      <li><a href="http://vuex.vuejs.org/" target="_blank">vuex</a></li>
-      <li><a href="http://vue-loader.vuejs.org/" target="_blank">vue-loader</a></li>
-      <li><a href="https://github.com/vuejs/awesome-vue" target="_blank">awesome-vue</a></li>
+<h2>Ecosystem</h2>
+<ul>
+<li><a href="http://router.vuejs.org/" target="_blank">vue-router</a></li>
+<li><a href="http://vuex.vuejs.org/" target="_blank">vuex</a></li>
+<li><a href="http://vue-loader.vuejs.org/" target="_blank">vue-loader</a></li>
+<li><a href="https://github.com/vuejs/awesome-vue" target="_blank">awesome-vue</a></li>
     </ul>
 -->
-  </div>
+    </div>
 </template>
 
 <script>
-import allQuestions from "./components/allQuestions.vue";
-import singleQuestion from "./components/singleQuestion.vue";
-import profileView from "./components/profileView.vue";
-import usersData from "./data/users.json";
-    
-    
-export default {
-    components: {
-        "allQuestions": allQuestions,
-        "singleQuestion": singleQuestion,
-        "profileView": profileView
-    },
-    
-    
+    import allQuestions from "./components/allQuestions.vue";
+    import singleQuestion from "./components/singleQuestion.vue";
+    import profileView from "./components/profileView.vue";
+    import usersData from "./data/users.json";
+    import questionList from "./data/questions.json";
 
-  data() {
-    return {
-    users: usersData
+
+    export default {
+        components: {
+            "allQuestions": allQuestions,
+            "singleQuestion": singleQuestion,
+            "profileView": profileView
+        },
+
+
+        data() {
+            return {
+                users: usersData.users,
+                questions: questionList.questions
+
+
+                //        users: [
+                ////            "Mark" , "Anna"
+                //            {name: "Mark", job: "plumber"},
+                //            {name: "Anne", job: "engineer"}
+                //        ]
+                
+            }
+        }
     }
-  }
-}
 
 </script>
 

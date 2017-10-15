@@ -39,10 +39,8 @@
     height: 53px;
     width: 53px;
     border-radius: 50%;
-    background-image: url(../users_photos/user2.3.png);
-    background-position: center;
-    background-size: cover;
     margin: 0 auto;
+    display: block;
     @include hoverEffect;
 }
 
@@ -52,7 +50,6 @@
     text-align: center;
     color: $color-blue-dark;
     font-family: $sans-serif-medium-font;
-    text-transform: none;
     @include hoverEffect;
 }
 
@@ -127,6 +124,7 @@ h4 {
     padding: 7px;
     font-family: $main-sans-serif-font;
     color: $color-grey-blue;
+    text-transform: uppercase;
 }
 
 

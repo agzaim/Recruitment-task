@@ -23,13 +23,14 @@ header {
     h3 {
         display: inline-block;
         font-size: 29px;
+        font-family: $main-sans-serif-font;
+    }
         p {
             //    border: 1px solid blue;
             font-family: $main-serif-font;
             display: inline-block;
             float: right;
             margin-top: 9px;
-        }
     }
 }
 

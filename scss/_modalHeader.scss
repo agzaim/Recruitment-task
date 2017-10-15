@@ -112,6 +112,12 @@
     color: $color-grey-blue;
     font-family: $sans-serif-medium-font;
     text-align: center;
+    &:last-child {
+        display: flex;
+        @include mobiles {
+            display: block;
+        }
+    }
     span {
         //        font-family: lunchtype22-regular, sans-serif;
         color: $color-almost-black;
@@ -123,17 +129,16 @@
 }
 
 .ribbon-container {
-    display: inline-block;
     @include mobiles {
-        display: block;
         margin: 0 auto;
+        padding-top: 3px;
     }
 }
 
 .ribbon {
-    border: 1px solid green;
-    height: 10px;
-    width: 10px;
+    height: 21px;
+    width: 14px;
     display: inline-block;
+    margin-left: 4px;
 }
 

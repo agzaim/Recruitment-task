@@ -1,44 +1,159 @@
 <template>
-<!--  <div>-->
-    <header>
+  <div>
+<header>
+    <div class="container">
+        <div class="header-title-box">
+            <div class="left-arrow">&lt;</div>
+
+            <h3>QUESTIONS</h3> 
+            <div class="plus-mark">+</div>
+    </div>
+        <div class="header-view-buttons">
+            <input type="radio" name="viewType" value="myShelf" checked> 
+            <label>My shelf</label>
+            <input type="radio" name="viewType" value="allQuestions"> 
+            <label>All questions</label>
+    </div>
+        <p class="header-sorting-box">
+            Sort by:
+            <a class="sorting-choice">recent</a> 
+            or 
+            <a class="sorting-choice">hot</a>
+        </p>
+        <div class="clearfix"></div>
+        <input class="search-input" type="search" placeholder="Search questions">
+        <input class="search-btn" type="button" value="SEARCH">
+    </div>
+    </header>
+
+  <div class="page-container">
             <div class="container">
-                <!--                <div class="inner_header-container">-->
-                <div class="header-title-box">
-                                <div class="left-arrow">&lt;</div>
+                <div class="question-box" v-for="question in questions">
+                    <div class="question-box-header">
+                      <img class="user-photo" v-bind:src="question.authorPhoto">        
+                        <div class="question-box-header-content">
+                            <p>
+                                <span class="user-name"> 
+                                    {{ question.author }}
+                                </span>
+                                IS ASKING:
+                            </p>
+                            <h4>
+                            {{ question.question }}
+                            </h4>
+                        </div>
+                    </div>
+                    <div class="question-box-content">
+                        <div class="user-activities-container">
+                            <div class="question-box-element">
+                                <div class="user-activity-desription">
+                                    ASKED
+                                </div>
+                            </div>
+                            <div class="question-box-element">
+                                <span>
+                                    {{ question.moreActivities }}
+                                </span>
+                                <p> 
+                                    more <br> 
+                                    activities
+                                </p>
+                                <div class="question-box-element-dot"></div>
+                            </div>
+                            <div class="question-box-element" v-for="activity in question.activities">
+                                <img class="user-photo" v-bind:src="activity.authorPhoto">
+                                <div class="user-activity-desription">
+                                    {{ activity.type }}
+                                    <div class="question-box-element-dot"></div>
+                                </div>
+                            </div>
+ <!--                           <div class="question-box-element">
 
-                    <h3>QUESTIONS</h3> 
-                    <div class="plus-mark">+</div>
-                </div>
-                <div class="header-view-buttons">
-                    <input type="radio" name="viewType" value="myShelf" checked> 
-                    <label>My shelf</label>
-                    <input type="radio" name="viewType" value="allQuestions"> 
-                    <label>All questions</label>
-                </div>
-                <p class="header-sorting-box">
-                    Sort by:
-                    <a class="sorting-choice">recent</a> 
-                    or 
-                    <a class="sorting-choice">hot</a>
-                </p>
-                <div class="clearfix"></div>
-                <!--                </div>-->
+                                <div class="user-photo">
+                                </div>
+                                <div class="user-activity-desription">
+                                    COMMENTED
+                                    <div class="question-box-element-dot"></div>
+                                </div>
+                            </div>
+-->
+<!--
+                            <div class="question-box-element">
+                                <div class="user-photo">
+                                </div>
+                                <div class="user-activity-desription">
+                                    COMMENTED
+                                    <div class="question-box-element-dot"></div>
+                                </div>
+                            </div>
+-->
+<!--
+                            <div class="question-box-element">
+                                <div class="user-photo">
+                                </div>
+                                <div class="user-activity-desription">
+                                    ANSWERED
+                                    <div class="question-box-element-dot"></div>
+                                </div>
+                            </div>
+-->
 
-                <input class="search-input" type="search" placeholder="Search questions">
-                <input class="search-btn" type="button" value="SEARCH">
-            </div>
-        </header>
-<!--  </div>-->
+                        </div>
+
+                        <div class="question-box-summary">
+                            <p>
+                                <span class="discussion-number"> 
+                                    {{ question.relatedDiscussions }}
+                                </span> 
+                                related discussions
+                            </p> 
+                            <p>
+                                <span class="peer-number">
+                                    {{ question.peersInvolved }}
+                                </span> 
+                                peers involved
+                            </p> 
+                            <p>
+                                <span class="conversation-number">
+                                    {{ question.conversations }}
+                                </span> 
+                                conversations
+                            </p>
+                        </div>
+                    </div>
+                </div>
+    </div>
+    </div>
+    
+    
+
+    
+    
+    
+    
+
+    
+    
+    
+    
+    
+    </div>
 </template>
 
 <script>
-export default {
-//  name: 'app',
-  data () {
-    return {
+    export default {
+        props: {
+            questions: {
+                type: Array,
+                required: true
+            }
+        },
+        data () {
+        return {
+//            src: require("../assets/users_photos/user2.png")
     }
-  }
-}
+    }
+    }
 
 </script>
 
