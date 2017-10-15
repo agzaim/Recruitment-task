@@ -8,13 +8,19 @@
 .question-box-header {
     padding: 20px;
     padding-bottom: 24px;
-    width: 78%;
+    width: 76%;
     background-color: $color-blue-light;
+     @include smallTablets {
+         width: 100%;
+    }
     .user-photo {
         display: inline-block;
         margin-right: 35px;
         margin-left: 5px;
         vertical-align: top;
+        @include mobiles {
+            margin-right: 10px;
+        }
     }
     p {
         color: $color-grey-blue;
@@ -64,16 +70,21 @@ h4 {
 
 .question-box-content {
     display: flex;
-    justify-content: space-between;
+    justify-content: flex-start;
     p {
         @include acivitiesFontStyle;
     }
 }
 
 .user-activities-container {
-    width: 78%;
+    width: 76%;
     display: flex;
-    justify-content: space-between;
+    @include smallTablets {
+         width: 70%;
+    }
+    @include mobiles {
+         width: 60%;
+            }
 }
 
 
@@ -81,10 +92,9 @@ h4 {
     background-color: $color-grey-white;
     padding-top: 25px;
     margin-top: 30px;
-    //    width: 105px;
+    margin-right: 13px;
     width: 15%;
     position: relative;
-    //    border: 1px solid green;
     &:first-child {
         margin-top: 0;
         background-color: $color-blue-light;
@@ -94,11 +104,40 @@ h4 {
         background-color: #fff;
     }
     &:last-child {
+        margin-right: 0;
         .user-activity-desription {
             border-top: 1px solid #000;
         }
         .question-box-element-dot {
             background-color: #000;
+        }
+    }
+    @include smallTablets {
+        margin-right: 20px;
+        width: 20%;
+        &:nth-last-child(2) {
+            display: none;
+        }
+        &:nth-last-child(3) {
+            display: none;
+        }
+        &:nth-child(2) {
+            display: block;
+        }
+    }
+     @include mobiles {
+        margin-right: 10px;
+        width: 36%;
+         margin-top: 0;
+        &:nth-last-child(4) {
+            display: none;
+        }
+        &:first-child {
+            display: none;
+        }
+        &:nth-child(2) {
+            display: block;
+            background-color: $color-grey-white;
         }
     }
     p {
@@ -111,17 +150,17 @@ h4 {
         font-family: $main-sans-serif-font, sans-serif;
         font-size: 18px;
         margin-top: 17px;
-        margin-bottom: 57px;
-        //                    font-weight: 400;
+        margin-bottom: 60px;
     }
 }
+
 
 .user-activity-desription {
     border-top: 1px solid $color-grey-light;
     font-size: 12px;
     text-align: center;
-    margin: 57px 8px 0 8px;
-    padding: 7px;
+    margin: 60px 8px 0 8px;
+    padding: 6px;
     font-family: $main-sans-serif-font;
     color: $color-grey-blue;
     text-transform: uppercase;
@@ -140,13 +179,15 @@ h4 {
 
 
 .question-box-summary {
-    //    border: 1px solid yellow;
     margin-top: 30px;
     display: flex;
     justify-content: space-between;
     flex-flow: column;
     align-items: flex-start;
-    padding-right: 18px;
+    padding-left: 60px;
+    @include mobiles {
+        padding-left: 30px;
+    }
 }
 
 

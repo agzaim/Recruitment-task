@@ -6,14 +6,13 @@
         <title>Recruitment project</title>
         <link rel="stylesheet" href="css/main.css">
         <script src="https://unpkg.com/vue"></script>
-        
+
     </head>
     <body>
         <header>
+            <div class="left-arrow">&lt;</div>
             <div class="container">
                 <div id="title" class="header-title-box">
-                                <div class="left-arrow">&lt;</div>
-
                     <h3>QUESTIONS</h3> 
                     <div class="plus-mark">+</div>
                 </div>
@@ -23,6 +22,7 @@
                     <input type="radio" name="viewType" value="allQuestions"> 
                     <label>All questions</label>
                 </div>
+                <!--                <div class="clearfix"></div>-->
                 <p class="header-sorting-box">
                     Sort by:
                     <a class="sorting-choice">recent</a> 
@@ -30,18 +30,23 @@
                     <a class="sorting-choice">hot</a>
                 </p>
                 <div class="clearfix"></div>
+                <!--                <div class="searching-box">-->
                 <input class="search-input" type="search" placeholder="Search questions">
                 <input class="search-btn" type="button" value="SEARCH">
+                <div class="clearfix"></div>
+
+                <!--                </div>-->
             </div>
+            <div class="clearfix"></div>
         </header>
         <div class="page-container">
             <div class="container">
                 <div class="question-box">
                     <div class="question-box-header">
                         <img class="user-photo" src="./users_photos/user1.png">
-                      
-<!--                        <div class="user-photo">-->
-<!--                        </div>-->
+
+                        <!--                        <div class="user-photo">-->
+                        <!--                        </div>-->
                         <div class="question-box-header-content">
                             <p>
                                 <span class="user-name">Andrew</span>
@@ -67,22 +72,16 @@
                                 </p>
                                 <div class="question-box-element-dot"></div>
                             </div>
-                            <div class="question-box-element">
-                                <img class="user-photo" src="./users_photos/user1.png">
-    
-                                <div class="user-activity-desription">
-                                    COMMENTED
-                                    <div class="question-box-element-dot"></div>
-                                </div>
-                            </div>
-                            <div class="question-box-element">
-                                <div class="user-photo">
-                                </div>
-                                <div class="user-activity-desription">
-                                    COMMENTED
-                                    <div class="question-box-element-dot"></div>
-                                </div>
-                            </div>
+                            <!--
+<div class="question-box-element">
+<img class="user-photo" src="./users_photos/user1.png">
+
+<div class="user-activity-desription">
+COMMENTED
+<div class="question-box-element-dot"></div>
+</div>
+</div>
+-->
                             <div class="question-box-element">
                                 <div class="user-photo">
                                 </div>
@@ -115,11 +114,9 @@
                         </div>
                     </div>
                 </div>
-                <img class="user-photo" src="./users_photos/user1.png">
                 <div class="question-box">
                     <div class="question-box-header">
-                        <div class="user-photo">
-                        </div>
+                        <img class="user-photo" src="./users_photos/user05.jpg">
                         <div class="question-box-header-content">
                             <p>
                                 <span class="user-name">Andrew</span>
@@ -204,7 +201,8 @@
                 <div class="clearfix"></div>
                 <div class="modal-container">
                     <div class="modal-header">
-                        <div class="user-profile-photo"></div>
+                        <!--                        <div class="user-profile-photo"></div>-->
+                        <img class="user-profile-photo" src="./users_photos/user05.png">
                         <div class="user-profile-name">
                             Dr. Tomson
                         </div>
@@ -221,7 +219,7 @@
                                     <img class="ribbon" src="items/fullRibbon.png">
                                     <img class="ribbon" src="items/fullRibbon.png">
                                     <img class="ribbon" src="items/emptyRibbon.png">
-                                    </div>
+                                </div>
                             </div>
                         </div>
                     </div>
@@ -302,6 +300,6 @@
                 </div>
             </div>
         </div>
-    <script src="app.js"></script>
+        <script src="app.js"></script>
     </body>
 </html>

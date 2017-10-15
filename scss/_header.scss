@@ -1,47 +1,39 @@
 header {
     background-color: #fff;
     width: 100%;
-    //    position: relative;
     z-index: 1;
-    padding-top: 30px;
-    padding-bottom: 19px;
+    padding: 30px 3% 19px 3%;
     @include mobiles {
         padding-top: 10px;
-        padding-bottom: 0;
     }
     .container {
         border: 0;
         box-shadow: 0 0 0 0;
+        @include mediaHeader {
+            width: 90%;
+            display: inline-block;
+            //            float: right;
+        }
         @include mobiles {
             padding-bottom: 0;
         }
-        //        width: 67%;
-        div {
-            display: inline-block;
-        }
+        //        div {
+        //            display: inline-block;
+        //        }
     }
     h3 {
         display: inline-block;
         font-size: 29px;
         font-family: $main-sans-serif-font;
     }
-        p {
-            //    border: 1px solid blue;
-            font-family: $main-serif-font;
-            display: inline-block;
-            float: right;
-            margin-top: 9px;
-    }
 }
 
+
 .left-arrow {
-    //    float: left;
-    //    margin-left: 65px;
     position: absolute;
-    //    display: inline-block;
     width: 40px;
     height: 40px;
-    left: -145px;
+    left: 4%;
     color: $color-grey-light;
     border: 1px solid $color-grey-light;
     text-align: center;
@@ -49,15 +41,17 @@ header {
     line-height: 40px;
     font-family: Courier, sans-serif;
     border-radius: 50%;
-    @include tablets {
+    @include mediaHeader {
         position: static;
-        margin-right: 45px;
+        display: inline-block;
+        vertical-align: top;      
     }
     @include mobiles {
-        height: 26px;
-        width: 26px;
+        height: 28px;
+        width: 28px;
         font-size: 25px;
-        line-height: 26px;
+        line-height: 28px;
+        margin-top: 4px;
     }
     &:hover {
         background-color: $color-grey-light;
@@ -68,15 +62,19 @@ header {
 
 
 .header-title-box {
-    position: relative;
-    width: 46%;
-    @include tablets {
-        padding-left: 25px;
+    display: inline-block;
+    width: 45%;
+    @include mediaHeader {
+        padding-left: 20px; 
+        @include mobiles {
+            width: 100%; 
+        }
     }
 }
 
 
 .plus-mark {
+    display: inline-block;
     height: 26px;
     width: 26px;
     border-radius: 50%;
@@ -91,34 +89,69 @@ header {
     @include hoverEffect;
 }
 
-
-.sorting-choice {
-    font-family: "lunchtype22regular", sans-serif;
-
-    //dopisz style
+.header-view-buttons {
+    display: inline-block;
+    color: $color-almost-black;
+    font-weight: bold;
+    @include mediaHeader {
+        float: right;
+        margin-top: 10px;
+    }
+    @include mobiles {
+        display: block;
+        float: none;
+        margin-top: 12px;
+    }
 }
+
 
 input[type="radio"] {
     margin-left: 26px;
+    margin-right: 5px;
+    @include mobiles {
+        margin-left: 23px;
+    }
+}
+
+.header-sorting-box {
+    display: inline-block;
+    float: right;
+    margin-top: 13px;
+    font-family: $main-serif-font;
+    font-weight: bold;
+    color: $color-grey-dark;
+    @include mediaHeader {
+        display: block;
+        float: none;
+        margin-top: 12px;
+        padding-left: 20px;
+    } 
+    @include mobiles {
+        display: none;
+    } 
 }
 
 
 .sorting-choice {
+    font-family: "lunchtype22regular", sans-serif;
     margin-left: 7px;
     color: $color-blue-dark;
     font-weight: bold;
-    &:active {
-        text-decoration: underline;
-        color: $color-grey-light;
-    }
-    &:hover {
-        opacity: 0.5;
-    }
     &:first-child {
         margin-right: 7px;
     }
+    @include hoverEffect;
 }
 
+
+.chosen-option {
+    color: $color-grey-light;
+    text-decoration: underline;
+    &:hover {
+        opacity: 1;
+        cursor: auto;
+    }
+}
 
 .search-input {
     width: 73%;
@@ -127,15 +160,25 @@ input[type="radio"] {
     padding-left: 14px;
     border: 1px solid $color-grey-white;
     background-color: $color-main-background;
-    margin-right: 13px;
+    float: left;
+    @include mobiles {
+        width: 100%;
+        margin-top: 10px;
+    }
 }
 
 .search-btn {
     height: 33px;
+    margin-top: 20px;
     width: 25%;
     border: 1px solid $color-grey-blue;
     color: $color-grey-light;
     font-size: 16px;
     font-weight: bold;
     background-color: #fff;
+    float: right;
+    @include mobiles {
+        width: 100%;
+        margin-top: 10px;
+    }
 }
