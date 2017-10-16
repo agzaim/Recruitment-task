@@ -20,8 +20,8 @@
                 <a class="sorting-choice">hot</a>
             </p>
             <div class="clearfix"></div>
-            <input class="search-input" type="search" placeholder="Search questions">
-            <input class="search-btn" type="button" value="SEARCH">
+            <input class="search-input" type="search" placeholder="Search questions" v-model="search">
+            <input class="search-btn" type="submit" value="SEARCH" v-on:click="searchQuestions">
             <div class="clearfix"></div>
         </div>
         <div class="clearfix"></div>
@@ -75,7 +75,7 @@
                             <span> 
                                 {{ question.relatedDiscussions }}
                             </span> 
-                            related discussions
+                            related {{ discussionsQuantity }}
                         </p> 
                         <p>
                             <span>
@@ -109,7 +109,23 @@
         },
         data () {
             return {
-                //            src: require("../assets/users_photos/user2.png")
+               search: ""
+            }
+        },
+        computed: {
+            discussionsQuantity: function() {
+                if (this.questions.relatedDiscussions == 1) {
+                    return "discussion";
+                } else {
+                    return "discussions";
+                }
+            }
+        },
+        methods: {
+            searchQuestions: function() {
+                this.questions = this.questions.filter((n) => {
+                     return n.question.match(this.search); 
+                });
             }
         }
     }
