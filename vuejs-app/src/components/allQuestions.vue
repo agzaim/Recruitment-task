@@ -29,7 +29,7 @@
 
     <div class="page-container">
         <div class="container">
-            <div class="question-box" v-for="question in questions">
+            <div class="question-box" v-for="question in filteredQuestions">
                 <div class="question-box-header">
                     <img class="user-photo" alt="" v-bind:src="question.authorPhoto">        
                     <div class="question-box-header-content">
@@ -39,9 +39,11 @@
                             </span>
                             IS ASKING:
                         </p>
-                        <h4>
-                            {{ question.question }}
-                        </h4>
+                        <router-link v-bind:to="'/question/' + question.idQ">
+                            <h4>
+                                {{ question.question }}
+                            </h4>
+                        </router-link>
                     </div>
                 </div>
                 <div class="question-box-content">
@@ -109,23 +111,24 @@
         },
         data () {
             return {
-               search: ""
+                search: "",
+                filteredQuestions: this.questions
             }
         },
         computed: {
             discussionsQuantity: function() {
-                if (this.questions.relatedDiscussions == 1) {
+                if (this.relatedDiscussions == 1) {
                     return "discussion";
                 } else {
                     return "discussions";
                 }
-            }
+            } 
         },
         methods: {
             searchQuestions: function() {
-                this.questions = this.questions.filter((n) => {
-                     return n.question.match(this.search); 
-                });
+                this.filteredQuestions = this.questions.filter((quest) => {
+                     return quest.question.match(this.search) != null; 
+                });                                
             }
         }
     }

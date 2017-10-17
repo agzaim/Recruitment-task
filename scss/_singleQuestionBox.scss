@@ -84,13 +84,14 @@
     @include mobiles {
         width: 100%;
         padding: 10px;
+        font-size: 14px;
     }
 }
 
 
 .votes-box {
     display: flex;
-    padding-top: 30px;
+    padding-top: 20px;
     margin: 0 auto;
     @include mobiles {
         justify-content: flex-end;

@@ -65,6 +65,7 @@ h4 {
     font-weight: 800;
     color: $color-blue-dark; 
     letter-spacing: 1px;
+    @include hoverEffect;
 }
 
 
