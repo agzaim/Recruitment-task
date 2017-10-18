@@ -48,8 +48,8 @@
                                 {{ votesDescription(question.votes) }}
                             </p>
                             <div class="voting-arrows-container">
-                                <div class="voting-arrow arrow-up" v-on:click="question.votes++"></div>
-                                <div class="voting-arrow arrow-down" v-on:click="question.votes--"></div>
+                                <div class="voting-arrow arrow-up" v-on:click.once="question.votes++"></div>
+                                <div class="voting-arrow arrow-down" v-on:click.once="question.votes--"></div>
                             </div>
                         </div>
                         <div class="btn-container">
@@ -94,8 +94,8 @@
                              {{ votesDescription(answer.votes) }}
                         </p>
                         <div class="voting-arrows-container">
-                            <div class="voting-arrow arrow-up" v-on:click="answer.votes++"></div>
-                            <div class="voting-arrow arrow-down" v-on:click="answer.votes--"></div>
+                            <div class="voting-arrow arrow-up" v-on:click.once="answer.votes++"></div>
+                            <div class="voting-arrow arrow-down" v-on:click.once="answer.votes--"></div>
                         </div>
                     </div>
                 </div>
@@ -129,8 +129,8 @@
                             {{ votesDescription(comment.votes) }}
                         </p>
                         <div class="voting-arrows-container">
-                            <div class="voting-arrow arrow-up" v-on:click="comment.votes++"></div>
-                            <div class="voting-arrow arrow-down" v-on:click="comment.votes--"></div>
+                            <div class="voting-arrow arrow-up" v-on:click.once="comment.votes++"></div>
+                            <div class="voting-arrow arrow-down" v-on:click.once="comment.votes--"></div>
                         </div>
                     </div>
                 </div>

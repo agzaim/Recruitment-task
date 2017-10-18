@@ -15,9 +15,13 @@
             </div>
             <p class="header-sorting-box">
                 Sort by:
-                <a class="sorting-choice chosen-option">recent</a> 
+                <a class="sorting-choice" v-on:click="sortByDate" v-bind:class="{active: activeDateBtn}">
+                    recent
+                </a> 
                 or 
-                <a class="sorting-choice">hot</a>
+                <a class="sorting-choice" v-on:click="sortByVotes" v-bind:class="{active: activeVoteBtn}">
+                    hot
+                </a>
             </p>
             <div class="clearfix"></div>
             <input class="search-input" type="search" placeholder="Search questions" v-model="search">
@@ -29,7 +33,7 @@
 
     <div class="page-container">
         <div class="container">
-            <div class="question-box" v-for="question in filteredQuestions">
+            <div class="question-box" v-for="question in visibleQuestions">
                 <div class="question-box-header">
                     <img class="user-photo" alt="" v-bind:src="question.authorPhoto">        
                     <div class="question-box-header-content">
@@ -117,17 +121,45 @@
                 discussion: "discussion",
                 peer: "peer",
                 conversation: "conversation",
-                filteredQuestions: this.questions
+                activeDateBtn: true,
+                activeVoteBtn: false,
+                visibleQuestions: this.questions
             }
         },
         computed: {
-           
+//            filteredQuestions: function() {
+//                return this.questions.sort((a, b) => {
+//                    return parseFloat(a.publicationDate) - parseFloat(b.publicationDate);
+//                });
+//            }
+//            visibleQuestions: function() {
+//                return this.questions.filter((quest) => {
+//                    return quest.question.match(this.search) != null; 
+//                });                                
+//            }
         },
         methods: {
             searchQuestions: function() {
-                this.filteredQuestions = this.questions.filter((quest) => {
-                     return quest.question.match(this.search) != null; 
+//                console.log(this.questions[0]);
+//                           this.visibleQuestions = this.questions[0];
+//                           
+                this.visibleQuestions = this.questions.filter((quest) => {
+                    return quest.question.match(this.search) != null; 
                 });                                
+            },
+            sortByDate: function() {
+                this.activeDateBtn = true;
+                this.activeVoteBtn = false;
+                this.visibleQuestions = this.questions.sort((a, b) => {
+                    return b.publicationDate.localeCompare(a.publicationDate); 
+                });
+            },
+            sortByVotes: function() {
+                this.activeDateBtn = false;
+                this.activeVoteBtn = true;
+                this.visibleQuestions = this.questions.sort((a, b) => {
+                    return b.votes - a.votes;
+                });
             },
             activitiesQuantity: function(quantity, description) {
                 if (quantity == 1) {

@@ -162,10 +162,10 @@
         {
             "idQ": 3,
             "question": "Amet nisl suscipit adipiscing bibendum est ultricies integer?",
-            "author": "Joseph",
-            "authorPhoto": "../../users_photos/user3.png",
+            "author": "Dr. Mark",
+            "authorPhoto": "../../users_photos/user2.png",
             "publicationDate": "2016-04-09 08:13:28",
-            "votes": 9,
+            "votes": 11,
             "relatedDiscussions": 8,
             "peersInvolved": 3,
             "conversations": 7,
@@ -174,8 +174,8 @@
             "activities": [
                 {
                     "type": "commented",
-                    "author": "Dr. Mark",
-                    "authorPhoto": "../../users_photos/user2.png"
+                    "author": "Joseph",
+                    "authorPhoto": "../../users_photos/user3.png"
                 },
                 {
                     "type": "commented",
@@ -238,7 +238,7 @@
             "author": "Marie",
             "authorPhoto": "../../users_photos/user4.png",
             "publicationDate": "2015-09-21 08:31:12",
-            "votes": 9,
+            "votes": 3,
             "relatedDiscussions": 2,
             "peersInvolved": 7,
             "conversations": 4,
@@ -305,7 +305,7 @@
             "question": "Leo integer eo vel orci porta non suspendisse interdum?",
             "author": "Sofia",
             "authorPhoto": "../../users_photos/user5.png",
-            "publicationDate": "2017-01-22 11:53:12",
+            "publicationDate": "2017-10-12 11:53:12",
             "votes": 4,
             "relatedDiscussions": 8,
             "peersInvolved": 7,
@@ -375,11 +375,11 @@
         },
         {
             "idQ": 6,
-            "question": "Vitae proin sagittis nisl rhoncus mattis rhoncus. Eu non diam?",
+            "question": "Proin sagittis nisl rhoncus mattis rhoncus. Eu non diam?",
             "author": "Joseph",
             "authorPhoto": "../../users_photos/user3.png",
-            "publicationDate": "2017-08-12 04:13:02",
-            "votes": 9,
+            "publicationDate": "2017-09-12 04:13:02",
+            "votes": 1,
             "relatedDiscussions": 7,
             "peersInvolved": 1,
             "conversations": 3,
@@ -443,11 +443,11 @@
         },
         {
             "idQ": 7,
-            "question": "Lorem ipsum dolor sit amet?",
+            "question": "Lorem ipsumom doloresos sit amet?",
             "author": "Patricia",
             "authorPhoto": "../../users_photos/user1.png",
-            "publicationDate": "2017-05-09 00:17:12",
-            "votes": 5,
+            "publicationDate": "2016-05-09 00:17:12",
+            "votes": -1,
             "relatedDiscussions": 5,
             "peersInvolved": 9,
             "conversations": 0,

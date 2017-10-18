@@ -252,6 +252,7 @@ input[type="radio"] {
   font-weight: bold;
 }
 
+
 .sorting-choice:first-child {
   margin-right: 7px;
 }
@@ -261,12 +262,12 @@ input[type="radio"] {
   opacity: 0.5;
 }
 
-.chosen-option {
+.active {
   color: #a7a9ac;
   text-decoration: underline;
 }
 
-.chosen-option:hover {
+.active:hover {
   opacity: 1;
   cursor: auto;
 }
@@ -351,6 +352,10 @@ input[type="radio"] {
 
 .question-box-header .user-name {
   padding-right: 6px;
+}
+
+.question-box-header-content a {
+    text-decoration: none;
 }
 
 .question-box-header-content {
