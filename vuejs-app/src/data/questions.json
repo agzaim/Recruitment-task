@@ -55,14 +55,16 @@
                     "authorPhoto": "../../users_photos/user5.png",
                     "when": "3 days ago",
                     "votes": 3,
-                    "answer": "Dolor sed viverra ipsum nunc aliquet bibendum enim facilisis. Semper viverra nam libero justo laoreet sit."
+                    "answer": "Dolor sed viverra ipsum nunc aliquet bibendum enim facilisis. Semper viverra nam libero justo laoreet sit.",
+                    "comments": []
                 },
                 {
                     "author": "Marie",
                     "authorPhoto": "../../users_photos/user4.png",
                     "when": "last Monday",
                     "votes": 4,
-                    "answer": "Ultrices dui sapien eget mi proin sed libero enim. Nulla facilisi cras fermentum odio eu feugiat. Dolor sed viverra ipsum nunc aliquet bibendum enim facilisis. Semper viverra nam libero justo laoreet sit."
+                    "answer": "Ultrices dui sapien eget mi proin sed libero enim. Nulla facilisi cras fermentum odio eu feugiat. Dolor sed viverra ipsum nunc aliquet bibendum enim facilisis. Semper viverra nam libero justo laoreet sit.",
+                    "comments": []
                 }
             ]
         },
@@ -75,7 +77,7 @@
             "votes": 9,
             "relatedDiscussions": 7,
             "peersInvolved": 6,
-            "conversations": 3,
+            "conversations": 1,
             "content": "Phasellus vestibulum. Amet nisl suscipit adipiscing bibendum est ultricies integer. Leo vel orci porta non pulvinar neque laoreet suspendisse interdum. Vitae proin sagittis nisl rhoncus mattis rhoncus. Eu non diam.",
             "moreActivities": 3,
             "activities": [
@@ -101,11 +103,12 @@
             },
             "answeres": [
                 {
-                    "author": "Joseph",
-                    "authorPhoto": "../../users_photos/user3.png",
+                    "author": "Dr. Mark",
+                    "authorPhoto": "../../users_photos/user2.png",
                     "when": "3 days ago",
                     "votes": 2,
-                    "answer": "Dolor sed viverra ipsum nunc aliquet bibendum enim facilisis. Semper viverra nam libero justo laoreet sit. Ultred libero enim. Nulla facilisi cras fermentum odio eu feugiat."
+                    "answer": "Dolor sed viverra ipsum nunc aliquet bibendum enim facilisis. Semper viverra nam libero justo laoreet sit. Ultred libero enim. Nulla facilisi cras fermentum odio eu feugiat.",
+                    "comments": []
                 },
                 {
                     "author": "Sofia",
@@ -120,6 +123,29 @@
                             "when": "2 days ago",
                             "votes": 6,
                             "comment": "Nulla facilisi cras fermentum odio eu feugiat. Dolor sed viverra ipsum nunc aliquet bibendum enim facilisis. Semper viverra nam libero justo laoreet sit."
+                        },
+                        {
+                            "author": "Joseph",
+                            "authorPhoto": "../../users_photos/user3.png",
+                            "when": "1 days ago",
+                            "votes": 3,
+                            "comment": "odio eu feugiat. Dolor sed. Bulla facilisi cras fermentum viverra ipsum nunc aliquet bibendum enim facilisis. Semper viverra nam libero justo laoreet sit."
+                        }
+                    ]
+                },
+                {
+                    "author": "Maria",
+                    "authorPhoto": "../../users_photos/user4.png",
+                    "when": "6 days ago",
+                    "votes": 3,
+                    "answer": "Sed viverra igtpsum nunc aliquet bibendum enim facilisis. Semper viverra nam libero justo laoreet sit.",
+                    "comments": [
+                        {
+                            "author": "Joseph",
+                            "authorPhoto": "../../users_photos/user3.png",
+                            "when": "2 days ago",
+                            "votes": 6,
+                            "comment": "Nulla facilisi cras fermentum odio eu feugiat. Dolor sed viverra ipsum nunc aliquet bibendum enim facilisis. Semper viverra nam libero justo laoreet sit."
                         }
                     ]
                 },
@@ -128,7 +154,8 @@
                     "authorPhoto": "../../users_photos/user2.png",
                     "when": "last Monday",
                     "votes": 7,
-                    "answer": "Ultrices dui sapien eget mi proin sed libero enim. Nulla facilisi cras fermentum odio eu feugiat. Dolor sed viverra ipsum nunc aliquet bibendum enim facilisis. Semper viverra nam libero justo laoreet sit."
+                    "answer": "Ultrices dui sapien eget mi proin sed libero enim. Nulla facilisi cras fermentum odio eu feugiat. Dolor sed viverra ipsum nunc aliquet bibendum enim facilisis. Semper viverra nam libero justo laoreet sit.",
+                    "comments": []
                 }
             ]
         },
@@ -192,14 +219,16 @@
                     "authorPhoto": "../../users_photos/user5.png",
                     "when": "3 days ago",
                     "votes": 3,
-                    "answer": "Dolor sed viverra ipsum nunc aliquet bibendum enim facilisis. Semper viverra nam libero justo laoreet sit."
+                    "answer": "Dolor sed viverra ipsum nunc aliquet bibendum enim facilisis. Semper viverra nam libero justo laoreet sit.",
+                    "comments": []
                 },
                 {
                     "author": "Patricia",
                     "authorPhoto": "../../users_photos/user1.png",
                     "when": "last Sunday",
                     "votes": 3,
-                    "answer": "Ultrices dui sapien eget mi proin sed libero enim. Nulla facilisi cras fermentum odio eu feugiat. Dolor sed viverra ipsum nunc aliquet bibendum enim facilisis. Semper viverra nam libero justo laoreet sit."
+                    "answer": "Ultrices dui sapien eget mi proin sed libero enim. Nulla facilisi cras fermentum odio eu feugiat. Dolor sed viverra ipsum nunc aliquet bibendum enim facilisis. Semper viverra nam libero justo laoreet sit.",
+                    "comments": []
                 }
             ]
         },
@@ -258,14 +287,16 @@
                     "authorPhoto": "../../users_photos/user1.png",
                     "when": "1 year ago",
                     "votes": 7,
-                    "answer": "Dolor sed viverra ipsum nunc aliquet bibendum enim facilisis. Semper viverra nam libero justo laoreet sit."
+                    "answer": "Dolor sed viverra ipsum nunc aliquet bibendum enim facilisis. Semper viverra nam libero justo laoreet sit.",
+                    "comments": []
                 },
                 {
                     "author": "Dr. Mark",
                     "authorPhoto": "../../users_photos/user2.png",
                     "when": "11 months ago",
                     "votes": 5,
-                    "answer": "Sapien eget mi proin sed libero enim. Nulla facilisi cras fermentum odio eu feugiat. Dolor sed viverdfra ipsum nunc aliquet bibendum enim facilisis. Semper viverra nam libero justo laoreet sit."
+                    "answer": "Sapien eget mi proin sed libero enim. Nulla facilisi cras fermentum odio eu feugiat. Dolor sed viverdfra ipsum nunc aliquet bibendum enim facilisis. Semper viverra nam libero justo laoreet sit.",
+                    "comments": []
                 }
             ]
         },
@@ -313,7 +344,8 @@
                     "authorPhoto": "../../users_photos/user1.png",
                     "when": "8 days ago",
                     "votes": 3,
-                    "answer": "Dolor sed viverra ipsum nunc aliquet bibendum enim facilisis. Semper viverra nam libero justo laoreet sit."
+                    "answer": "Dolor sed viverra ipsum nunc aliquet bibendum enim facilisis. Semper viverra nam libero justo laoreet sit.",
+                    "comments": []
                 },
                 {
                     "author": "Joseph",
@@ -336,7 +368,8 @@
                     "authorPhoto": "../../users_photos/user4.png",
                     "when": "last Monday",
                     "votes": 4,
-                    "answer": "Ultrices dui sapien eget mi proin sed libero enim. Nulla facilisi cras fermentum odio eu feugiat. Dolor sed viverra ipsum nunc aliquet bibendum enim facilisis. Semper viverra nam libero justo laoreet sit."
+                    "answer": "Ultrices dui sapien eget mi proin sed libero enim. Nulla facilisi cras fermentum odio eu feugiat. Dolor sed viverra ipsum nunc aliquet bibendum enim facilisis. Semper viverra nam libero justo laoreet sit.",
+                    "comments": []
                 }
             ]
         },
@@ -379,7 +412,8 @@
                     "authorPhoto": "../../users_photos/user3.png",
                     "when": "3 days ago",
                     "votes": 2,
-                    "answer": "Dolor sed viverra ipsum nunc aliquet bibendum enim facilisis. Semper viverra nam libero justo laoreet sit. Ultred libero enim. Nulla facilisi cras fermentum odio eu feugiat."
+                    "answer": "Dolor sed viverra ipsum nunc aliquet bibendum enim facilisis. Semper viverra nam libero justo laoreet sit. Ultred libero enim. Nulla facilisi cras fermentum odio eu feugiat.",
+                    "comments": []
                 },
                 {
                     "author": "Sofia",
@@ -402,7 +436,8 @@
                     "authorPhoto": "../../users_photos/user2.png",
                     "when": "last Monday",
                     "votes": 7,
-                    "answer": "Ultrices dui sapien eget mi proin sed libero enim. Nulla facilisi cras fermentum odio eu feugiat. Dolor sed viverra ipsum nunc aliquet bibendum enim facilisis. Semper viverra nam libero justo laoreet sit."
+                    "answer": "Ultrices dui sapien eget mi proin sed libero enim. Nulla facilisi cras fermentum odio eu feugiat. Dolor sed viverra ipsum nunc aliquet bibendum enim facilisis. Semper viverra nam libero justo laoreet sit.",
+                    "comments": []
                 }
             ]
         },
@@ -461,14 +496,16 @@
                     "authorPhoto": "../../users_photos/user5.png",
                     "when": "3 days ago",
                     "votes": 3,
-                    "answer": "Dolor sed viverra ipsum nunc aliquet bibendum enim facilisis. Semper viverra nam libero justo laoreet sit."
+                    "answer": "Dolor sed viverra ipsum nunc aliquet bibendum enim facilisis. Semper viverra nam libero justo laoreet sit.",
+                    "comments": []
                 },
                 {
                     "author": "Marie",
                     "authorPhoto": "../../users_photos/user4.png",
                     "when": "last Monday",
                     "votes": 4,
-                    "answer": "Ultrices dui sapien eget mi proin sed libero enim. Nulla facilisi cras fermentum odio eu feugiat. Dolor sed viverra ipsum nunc aliquet bibendum enim facilisis. Semper viverra nam libero justo laoreet sit."
+                    "answer": "Ultrices dui sapien eget mi proin sed libero enim. Nulla facilisi cras fermentum odio eu feugiat. Dolor sed viverra ipsum nunc aliquet bibendum enim facilisis. Semper viverra nam libero justo laoreet sit.",
+                    "comments": []
                 }
             ]
         }

@@ -77,19 +77,21 @@
                             <span> 
                                 {{ question.relatedDiscussions }}
                             </span> 
-                            related {{ discussionsQuantity }}
+                            related 
+                            {{ activitiesQuantity(question.relatedDiscussions, discussion) }}
                         </p> 
                         <p>
                             <span>
                                 {{ question.peersInvolved }}
                             </span> 
-                            peers involved
+                            {{ activitiesQuantity(question.peersInvolved, peer) }} 
+                            involved
                         </p> 
                         <p>
                             <span>
                                 {{ question.conversations }}
                             </span> 
-                            conversations
+                            {{ activitiesQuantity(question.conversations, conversation) }} 
                         </p>
                     </div>
                 </div>
@@ -112,24 +114,28 @@
         data () {
             return {
                 search: "",
+                discussion: "discussion",
+                peer: "peer",
+                conversation: "conversation",
                 filteredQuestions: this.questions
             }
         },
         computed: {
-            discussionsQuantity: function() {
-                if (this.relatedDiscussions == 1) {
-                    return "discussion";
-                } else {
-                    return "discussions";
-                }
-            } 
+           
         },
         methods: {
             searchQuestions: function() {
                 this.filteredQuestions = this.questions.filter((quest) => {
                      return quest.question.match(this.search) != null; 
                 });                                
-            }
+            },
+            activitiesQuantity: function(quantity, description) {
+                if (quantity == 1) {
+                    return description;
+                } else {
+                    return description + "s";
+                }
+            } 
         }
     }
 

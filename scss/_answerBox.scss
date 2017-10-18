@@ -11,6 +11,8 @@
 
 .answer-section {
     margin-top: 40px;
+    position: relative;
+    border: 0;
      &:last-child {
         margin-bottom: 70px;
     } 
@@ -29,6 +31,9 @@
     }
     .votes-box {
             padding-top: 48px;
+        @include mobiles {
+            padding-top: 10px;
+        }
     }
 }
 
@@ -39,8 +44,6 @@
 
 
 .answer-photo-box {
-//    border-right: $border-style;
-//    border-left: $border-style;
     width: 11%;
     padding-top: 20px;
     position: absolute;
@@ -123,9 +126,6 @@
         width: 55%;
         @include mobiles {
             width: 100%;
-        }
-        p {
-            margin-left: 15%;
         }
     }
 }
