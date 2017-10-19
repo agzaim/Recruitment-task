@@ -1,9 +1,10 @@
 {
     "questions": [
         {
-            "idQ": 1,
+            "questionID": 1,
             "question": "Lorem ipsum dolor sit amet?",
             "author": "Patricia",
+            "authorID": 1,
             "authorPhoto": "../../users_photos/user1.png",
             "publicationDate": "2017-05-09 00:17:12",
             "votes": 5,
@@ -69,9 +70,10 @@
             ]
         },
         {
-            "idQ": 2,
+            "questionID": 2,
             "question": "Vitae proin sagittis nisl rhoncus mattis rhoncus. Eu non diam?",
             "author": "Joseph",
+            "authorID": 3,
             "authorPhoto": "../../users_photos/user3.png",
             "publicationDate": "2017-08-12 04:13:02",
             "votes": 9,
@@ -160,9 +162,10 @@
             ]
         },
         {
-            "idQ": 3,
+            "questionID": 3,
             "question": "Amet nisl suscipit adipiscing bibendum est ultricies integer?",
             "author": "Dr. Mark",
+            "authorID": 2,
             "authorPhoto": "../../users_photos/user2.png",
             "publicationDate": "2016-04-09 08:13:28",
             "votes": 11,
@@ -233,9 +236,10 @@
             ]
         },
         {
-            "idQ": 4,
+            "questionID": 4,
             "question": "Amet nisl suscipit adipiscing bibendum est uporta non pulvinar?",
             "author": "Marie",
+            "authorID": 4,
             "authorPhoto": "../../users_photos/user4.png",
             "publicationDate": "2015-09-21 08:31:12",
             "votes": 3,
@@ -301,9 +305,10 @@
             ]
         },
     {
-            "idQ": 5,
+            "questionID": 5,
             "question": "Leo integer eo vel orci porta non suspendisse interdum?",
             "author": "Sofia",
+            "authorID": 5,
             "authorPhoto": "../../users_photos/user5.png",
             "publicationDate": "2017-10-12 11:53:12",
             "votes": 4,
@@ -374,9 +379,10 @@
             ]
         },
         {
-            "idQ": 6,
+            "questionID": 6,
             "question": "Proin sagittis nisl rhoncus mattis rhoncus. Eu non diam?",
             "author": "Joseph",
+            "authorID": 3,
             "authorPhoto": "../../users_photos/user3.png",
             "publicationDate": "2017-09-12 04:13:02",
             "votes": 1,
@@ -442,9 +448,10 @@
             ]
         },
         {
-            "idQ": 7,
+            "questionID": 7,
             "question": "Lorem ipsumom doloresos sit amet?",
             "author": "Patricia",
+            "authorID": 1,
             "authorPhoto": "../../users_photos/user1.png",
             "publicationDate": "2016-05-09 00:17:12",
             "votes": -1,

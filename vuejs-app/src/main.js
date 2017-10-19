@@ -9,11 +9,12 @@ import profileView from './components/profileView.vue';
 Vue.use(VueRouter);
 Vue.use(VueResource);
 
+Vue.component("profileView", profileView);
 
 const router = new VueRouter({
     routes: [
         {path: '/', component: allQuestions},
-        {path: '/profile', component: profileView},
+//        {path: '/profile', component: profileView},
         {path: '/question/:id', component: singleQuestion}
     ],
     mode: 'history'

@@ -1,30 +1,36 @@
 <template>
-    <div class="modal-background">
+  <transition name="modal">
+    <div class="modal-background"  v-on:click.self="$emit('close')">
             <div class="modal">
-                <div class="close-mark">&times;</div>
+                <div class="close-mark" v-on:click="$emit('close')">
+                    &times;
+                </div>
                 <div class="clearfix"></div>
                 <div class="modal-container">
                     <div class="modal-header">
                         
-<!--                        <img class="user-profile-photo" src="./users_photos/user05.png">-->
+                        <img class="user-profile-photo" alt="" v-bind:src="user.userPhoto">
                         <div class="user-profile-name">
-                            Dr. Tomson
+                            {{ user.userName }}
                         </div>
                         <div class="user-data-box">
                             <div class="user-data">
-                                MEMBER FOR <span>Xxxx months</span>
+                                MEMBER FOR 
+                                <span>
+                                    {{ user.membershipPeriod }}
+                                </span>
                             </div>
                             <div class="user-data">
-                                LAST SEEN <span>Saturday afternoon </span>
+                                LAST SEEN 
+                                <span>
+                                    {{ user.lastVisit }}
+                                </span>
                             </div>
                             <div class="user-data">
                                 ACTIVITY LEVEL 
                                 <div class="ribbon-container">
-<!--
-                                    <img class="ribbon" src="items/fullRibbon.png">
-                                    <img class="ribbon" src="items/fullRibbon.png">
-                                    <img class="ribbon" src="items/emptyRibbon.png">
--->
+                                    <img class="ribbon" src="../../items/fullRibbon.png" v-for="item in user.activityLevel">
+                                    <img class="ribbon" src="../../items/emptyRibbon.png" v-for="item in (3 - user.activityLevel)">
                                 </div>
                             </div>
                         </div>
@@ -35,26 +41,42 @@
                         <div class="modal-arrow arr-right">&gt;</div>
                     </div>
                     <p>
-                        That's where we have been these <span>5 months</span> ago
+                        That's where we have been these 
+                        <span>
+                            {{ user.membershipPeriod }}
+                        </span> ago
                     </p>
                     <div class="statistics-squares-container">
                         <div class="statistics-square">
-                            <div class="statistics-square-content"><span>46</span>peers
+                            <div class="statistics-square-content">
+                                <span>
+                                    {{ user.peersNumber }}
+                                </span>
+                                {{ activitiesQuantity(user.peersNumber, peer) }} 
                             </div>
                         </div>
                         <div class="statistics-square">
                             <div class="statistics-square-content">
-                                <span>29</span>discussions
+                                <span>
+                                    {{ user.discussionNumber }}
+                                </span>
+                                {{ activitiesQuantity(user.discussionNumber, discussion) }} 
                             </div>
                         </div>
                         <div class="statistics-square">
                             <div class="statistics-square-content">
-                                <span>19</span>findings
+                                <span>
+                                    {{ user.findingsNumber }}
+                                </span>
+                                {{ activitiesQuantity(user.findingsNumber, finding) }} 
                             </div>
                         </div>
                         <div class="statistics-square">
                             <div class="statistics-square-content">
-                                <span>10</span>questions
+                                <span>
+                                    {{ user.questionNumber }}
+                                </span>
+                                {{ activitiesQuantity(user.questionNumber, question) }} 
                             </div>
                         </div>
                     </div>
@@ -62,39 +84,34 @@
                         Who joined the platform that same period
                     </p>
                     <div class="modal-user-container">
-                        <div class="modal-user-box">
+                        <div class="modal-user-box" v-for="peer in user.otherPeers">
                             <div class="user-photo-frame">
-                                <div class="user-photo"></div>
+                                <img class="user-photo" alt="" v-bind:src="peer.userPhoto" v-on:click="modalTrigger(peer.userID)">
                             </div>
-                            <div class="user-name">Dr. Mark</div>
-                        </div>
-                        <div class="modal-user-box">
-                            <div class="user-photo-frame">
-                                <div class="user-photo"></div>
+                            <div class="user-name" v-on:click="modalTrigger(peer.userID)">
+                                {{ peer.userName }}
                             </div>
-                            <div class="user-name">Sofia</div>
-                        </div>
-                        <div class="modal-user-box">
-                            <div class="user-photo-frame">
-                                <div class="user-photo"></div>
-                            </div>
-                            <div class="user-name">Joseph</div>
-                        </div>
+                        </div>                       
                     </div>
                     <p>
                         The hottest discussion these days
                     </p>
                 </div>
                 <div class="modal-footer">
-                    <div class="user-photo"></div>
-                    <p><span class="user-name">Andrew</span> found the guardian article</p>
+                    <img class="user-photo" alt="" src="../../users_photos/user3.png" v-on:click="modalTrigger(3)">
+                    <p>
+                        <span class="user-name" v-on:click="modalTrigger(3)">
+                            Joseph
+                        </span> 
+                        found the guardian article
+                    </p>
                     <h4>Vegan diet to stop diabetes progress</h4>
                     <div class="footer-statistics-container">
                         <div class="footer-statistics-box">
                             <span>6</span> peers involved
                         </div>
                         <div class="footer-statistics-box">
-                            <span>3</span> related discussion
+                            <span>3</span> related discussions
                         </div>
                         <div class="footer-statistics-box">
                             <span>3</span> conversations
@@ -106,17 +123,46 @@
                 </div>
             </div>
         </div>
+      <profileView v-if="showModal" v-on:close="showModal = false" v-bind:authorID="authorID"></profileView>
+       </transition>
 </template>
 
 <script>
-export default {
-//  name: 'app',
-  data () {
-    return {
-        
+    
+    import usersData from "../data/users.json";
+    import methodMixins from "../mixins/methodMixins";
+
+
+    export default {
+        data () {
+            return {
+                users: usersData.users,
+                discussion: "discussion",
+                peer: "peer",
+                finding: "finding",
+                question: "question",
+                showModal: false
+//                authorID: 0
+            }
+        },
+
+        props: {
+            authorID: {
+                type: Number,
+                required: true
+            }
+        },
+
+        computed: {
+            user: function() {
+                return this.users.filter((user) => {
+                    return user.userID == this.authorID;
+                })[0];
+            }
+        },
+
+        mixins: [methodMixins]
     }
-  }
-}
 
 </script>
 

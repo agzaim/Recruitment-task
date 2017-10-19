@@ -1,5 +1,6 @@
 <template>
-  <div>
+<!--  <div v-bind:class="{hideScroll: showModal}">-->
+  <div class="hideScroll">
     <header>
             <div class="left-arrow">&lt;</div>
             <div class="container sng-header-container">
@@ -23,12 +24,12 @@
             <div class="container">
                 <div class="question-box single-question-box">
                     <div class="unfollow-btn" v-on:click="followToggler">
-                        {{ unfollow }}
+                         {{ unfollowBtn }} 
                     </div>
                     <div class="question-box-header">
-                        <img class="user-photo" alt="" v-bind:src="question.authorPhoto">
+                        <img class="user-photo" alt="" v-bind:src="question.authorPhoto" v-on:click="modalTrigger(question.authorID)">
                         <p>
-                            <span class="user-name"> 
+                            <span class="user-name" v-on:click="modalTrigger(question.authorID)"> 
                                 {{ question.author }}
                             </span>
                             IS ASKING:
@@ -141,73 +142,83 @@
                 </div>
             </div>         
     </div>
-  </div>
+  
+<profileView v-if="showModal" v-on:close="showModal = false" v-bind:authorID="authorID"></profileView>
+</div>
 </template>
 
 <script>
-export default {
-     props: {
-        questions: {
-                type: Array,
-                required: true
-        }
-    },
-    data () {
-        return {
-            id: this.$route.params.id,
-            peer: "peer",
-            unfollow: "unfollow"
-        }
-    },
-//    created() {
-//            this.question = this.questions.filter((quest) => {
-//                return quest.idQ == this.id;
-//            })[0];
-//        
-//    },
-    methods: {
-        // I couldn't figure out how to hide "COMMENT button" when the answer has comments using olny CSS magic, so I created following funcion. After all it's much better - works also to comment boxes :)
-        btnDescription: function(commentsList) {
-           if(commentsList.length > 0) {
-               return "CONTINUE discussion";
-           } else {
-               return "COMMENT";
-           }        
-        },
-        // I assumed that word "discussion" occuring in every question regardless of what is idicated by the number (on the sent view) was just a little bug :)
-        activitiesQuantity: function(quantity, description) {
-            if (quantity == 1) {
-                return description;
-            } else {
-                return description + "s";
+
+    import methodMixins from "../mixins/methodMixins";
+
+    export default {
+         props: {
+            questions: {
+                    type: Array,
+                    required: true
             }
         },
-        followToggler: function() {
-            if (this.unfollow == "unfollow") {
-                this.unfollow = "follow";
-            } else {
-                this.unfollow = "unfollow";
+        data () {
+            return {
+                id: this.$route.params.id,
+                peer: "peer",
+                unfollowBtn: "unfollow",
+                showModal: false,
+                authorID: 0
             }
         },
-        votesCounter: function(votes) {
-            return Math.abs(votes);
-        },
-        votesDescription: function(votes) {
-            if (votes >= 0) {
-                return "upvotes";
-            } else {
-                return "downvotes";
+    //    created() {
+    //            this.question = this.questions.filter((quest) => {
+    //                return quest.idQ == this.id;
+    //            })[0];
+    //        
+    //    },
+        methods: {
+            // I couldn't figure out how to hide "COMMENT button" when the answer has comments using olny CSS magic, so I created following funcion. After all it's much better - works also to comment boxes :)
+            btnDescription: function(commentsList) {
+               if(commentsList.length > 0) {
+                   return "CONTINUE discussion";
+               } else {
+                   return "COMMENT";
+               }        
+            },
+            
+            followToggler: function() {
+                if (this.unfollowBtn == "unfollow") {
+                    this.unfollowBtn = "follow";
+                } else {
+                    this.unfollowBtn = "unfollow";
+                }
+            },
+            
+            votesCounter: function(votes) {
+                return Math.abs(votes);
+            },
+            
+            votesDescription: function(votes) {
+                if (votes >= 0) {
+                    return "upvotes";
+                } else {
+                    return "downvotes";
+                }
             }
-        }
-    },
-    computed: {
-        question: function() {
-            return this.questions.filter((quest) => {
-                return quest.idQ == this.id;
-            })[0];
-        }
+            
+//            modalTrigger: function(authorID) {
+//                this.showModal = true,
+//                this.authorID = authorID;
+//            }
+        },
+        
+        computed: {
+            question: function() {
+                return this.questions.filter((quest) => {
+                    return quest.questionID == this.id;
+                })[0];
+            }
+        },
+        
+        mixins: [methodMixins]
     }
-}
 
 </script>
 

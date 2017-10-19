@@ -35,15 +35,15 @@
         <div class="container">
             <div class="question-box" v-for="question in visibleQuestions">
                 <div class="question-box-header">
-                    <img class="user-photo" alt="" v-bind:src="question.authorPhoto">        
+                    <img class="user-photo" alt="" v-bind:src="question.authorPhoto" v-on:click="modalTrigger(question.authorID)">    
                     <div class="question-box-header-content">
                         <p>
-                            <span class="user-name"> 
+                            <span class="user-name" v-on:click="modalTrigger(question.authorID)"> 
                                 {{ question.author }}
                             </span>
                             IS ASKING:
                         </p>
-                        <router-link v-bind:to="'/question/' + question.idQ">
+                        <router-link v-bind:to="'/question/' + question.questionID">
                             <h4>
                                 {{ question.question }}
                             </h4>
@@ -103,11 +103,14 @@
         </div>
     </div>
 
-
+<profileView v-if="showModal" v-on:close="showModal = false" v-bind:authorID="authorID"></profileView>
 </div>
 </template>
 
 <script>
+    
+    import methodMixins from "../mixins/methodMixins";
+
     export default {
         props: {
             questions: {
@@ -121,18 +124,26 @@
                 discussion: "discussion",
                 peer: "peer",
                 conversation: "conversation",
+                showModal: false,
+                authorID: 0,
                 activeDateBtn: true,
                 activeVoteBtn: false,
-                visibleQuestions: this.questions
+                visibleQuestions: this.questions.slice(0, 4)
+//                visibleQuestions: this.questions
             }
         },
         computed: {
+//            sortingQuestions: function() {
+//                return this.questions.sort((a, b) => {
+//                    return b.publicationDate.localeCompare(a.publicationDate); 
+//                });
+//            }
 //            filteredQuestions: function() {
 //                return this.questions.sort((a, b) => {
 //                    return parseFloat(a.publicationDate) - parseFloat(b.publicationDate);
 //                });
 //            }
-//            visibleQuestions: function() {
+//            visibQuestions: function() {
 //                return this.questions.filter((quest) => {
 //                    return quest.question.match(this.search) != null; 
 //                });                                
@@ -140,12 +151,9 @@
         },
         methods: {
             searchQuestions: function() {
-//                console.log(this.questions[0]);
-//                           this.visibleQuestions = this.questions[0];
-//                           
                 this.visibleQuestions = this.questions.filter((quest) => {
-                    return quest.question.match(this.search) != null; 
-                });                                
+                    return quest.question.toUpperCase().indexOf(this.search.toUpperCase()) > -1;
+                });
             },
             sortByDate: function() {
                 this.activeDateBtn = true;
@@ -160,14 +168,13 @@
                 this.visibleQuestions = this.questions.sort((a, b) => {
                     return b.votes - a.votes;
                 });
-            },
-            activitiesQuantity: function(quantity, description) {
-                if (quantity == 1) {
-                    return description;
-                } else {
-                    return description + "s";
-                }
-            } 
+            }
+        },
+        mixins: [methodMixins],
+
+        // I assumed that the default display of the questions should be listed by "recent" as this option is active in the sent view  
+        beforeMount() {
+            this.sortByDate();
         }
     }
 

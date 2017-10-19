@@ -1,0 +1,45 @@
+.discussion-timer {
+    @include acivitiesFontStyle;
+    padding-top: 5px;
+    float: right;
+    display: inline-block;
+    margin-top: 9px;
+    span {
+        padding: 0 9px;
+    }
+    @include mobiles {
+        display: none;
+    }
+}
+
+
+.sng-header-container {
+    padding-bottom: 18px;
+    @include mediaHeader {
+        width: 90%;
+        display: inline-block;
+        float: right;
+    }
+    .plus-mark {
+        margin-left: 38px;
+        @include mobiles {
+            float: right;
+            margin-top: 6px;
+        }
+    }
+//    .header-title-box {
+//        width: 50%;
+//        @include mobiles {
+//            width: 100%;
+//        }
+//    }
+}
+
+
+.single-title-box {
+    display: inline-block;
+     width: 50%;
+    @include mobiles {
+            width: 100%; 
+        }
+}
