@@ -35,7 +35,6 @@
 }
 
 @mixin tabletsOnly {
-//    @media screen and (max-width: 765px) {
     @media screen and (max-width: 915px) and (min-width: 651px) {
         @content;
     }
@@ -43,7 +42,6 @@
 
 @mixin mobiles {
     @media screen and (max-width: 650px) {
-//    @media screen and (max-width: 700px) {
         @content;
     }
 }

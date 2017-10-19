@@ -1,11 +1,10 @@
 .modal-background {
-    display: none;
     position: fixed;
     top: 0;
     right: 0;
     bottom: 0;
     left: 0;
-    z-index: 3;
+    z-index: 10;
     overflow-y: auto;
     overflow-x: hidden;
     width: 100%; 
@@ -32,12 +31,13 @@
     }
     p {
         font-size: 13px;
-        font-family: $sans-serif-medium-font;
+        font-family: lunchtype24expanded_medium, sans-serif;
         color: $color-grey-blue;
         text-transform: uppercase;
         margin: 17px 0;
         margin-top: 40px;
         text-align: center;
+        letter-spacing: 1.2px;
         @include mobiles {
             padding: 0 50px;
         }
@@ -47,6 +47,7 @@
         font-size: 42px;
         font-weight: 500;
         color: $color-almost-black;
+        letter-spacing: 1.5px;
     }
 }
 
@@ -57,7 +58,6 @@
     font-size: 24px;
     padding-right: 15px;
     padding-top: 8px;
-    //    font-weight: bold;
 }
 
 
@@ -79,12 +79,9 @@
 
 
 .user-profile-photo {
-    height: 80px;
-    width: 80px;
+    height: 85px;
+    width: 85px;
     border-radius: 50%;
-//    background-image: url(../users_photos/user1.3.png);
-//    background-position: center;
-//    background-size: cover;
     display: block;
     margin: 0 auto;
 }
@@ -113,6 +110,7 @@
     color: $color-grey-blue;
     font-family: $sans-serif-medium-font;
     text-align: center;
+    font-family: lunchtype24expanded_medium, sans-serif;
     &:last-child {
         display: flex;
         @include mobiles {
@@ -120,7 +118,6 @@
         }
     }
     span {
-        //        font-family: lunchtype22-regular, sans-serif;
         color: $color-almost-black;
         @include mobiles {
             display: block;
@@ -129,17 +126,21 @@
     }
 }
 
+
 .ribbon-container {
+    display: flex;
+    justify-content: space-between;
+    margin-left: 4px;
+    width: 63px;
     @include mobiles {
         margin: 0 auto;
         padding-top: 3px;
     }
 }
 
+
 .ribbon {
-    height: 21px;
-    width: 14px;
-    display: inline-block;
-    margin-left: 4px;
+    height: 22px;
+    width: 16px;
 }
 

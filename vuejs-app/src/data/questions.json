@@ -17,16 +17,19 @@
                 {
                     "type": "commented",
                     "author": "Dr. Mark",
+                    "authorID": 2,
                     "authorPhoto": "../../users_photos/user2.png"
                 },
                 {
                     "type": "commented",
                     "author": "Marie",
+                    "authorID": 4,
                     "authorPhoto": "../../users_photos/user4.png"
                 },
                 {
                     "type": "answered",
                     "author": "Joseph",
+                    "authorID": 3,
                     "authorPhoto": "../../users_photos/user3.png"
                 }
             ],
@@ -37,6 +40,7 @@
             "answeres": [
                 {
                     "author": "Joseph",
+                    "authorID": 3,
                     "authorPhoto": "../../users_photos/user3.png",
                     "when": "3 days ago",
                     "votes": -4,
@@ -44,6 +48,7 @@
                     "comments": [
                         {
                             "author": "Marie",
+                            "authorID": 4,
                             "authorPhoto": "../../users_photos/user4.png",
                             "when": "yesterday",
                             "votes": 1,
@@ -53,6 +58,7 @@
                 },
                 {
                     "author": "Sofia",
+                    "authorID": 5,
                     "authorPhoto": "../../users_photos/user5.png",
                     "when": "3 days ago",
                     "votes": 3,
@@ -61,6 +67,7 @@
                 },
                 {
                     "author": "Marie",
+                    "authorID": 4,
                     "authorPhoto": "../../users_photos/user4.png",
                     "when": "last Monday",
                     "votes": 4,
@@ -86,16 +93,19 @@
                 {
                     "type": "commented",
                     "author": "Marie",
+                    "authorID": 4,
                     "authorPhoto": "../../users_photos/user4.png"
                 },
                 {
                     "type": "commented",
                     "author": "Patricia",
+                    "authorID": 1,
                     "authorPhoto": "../../users_photos/user1.png"
                 },
                 {
                     "type": "answered",
                     "author": "Dr. Mark",
+                    "authorID": 2,
                     "authorPhoto": "../../users_photos/user2.png"
                 }
             ],
@@ -106,6 +116,7 @@
             "answeres": [
                 {
                     "author": "Dr. Mark",
+                    "authorID": 2,
                     "authorPhoto": "../../users_photos/user2.png",
                     "when": "3 days ago",
                     "votes": 2,
@@ -114,6 +125,7 @@
                 },
                 {
                     "author": "Sofia",
+                    "authorID": 5,
                     "authorPhoto": "../../users_photos/user5.png",
                     "when": "3 days ago",
                     "votes": 3,
@@ -121,6 +133,7 @@
                     "comments": [
                         {
                             "author": "Marie",
+                            "authorID": 4,
                             "authorPhoto": "../../users_photos/user4.png",
                             "when": "2 days ago",
                             "votes": 6,
@@ -128,6 +141,7 @@
                         },
                         {
                             "author": "Joseph",
+                            "authorID": 3,
                             "authorPhoto": "../../users_photos/user3.png",
                             "when": "1 days ago",
                             "votes": 3,
@@ -137,6 +151,7 @@
                 },
                 {
                     "author": "Maria",
+                    "authorID": 4,
                     "authorPhoto": "../../users_photos/user4.png",
                     "when": "6 days ago",
                     "votes": 3,
@@ -144,6 +159,7 @@
                     "comments": [
                         {
                             "author": "Joseph",
+                            "authorID": 3,
                             "authorPhoto": "../../users_photos/user3.png",
                             "when": "2 days ago",
                             "votes": 6,
@@ -153,8 +169,9 @@
                 },
                 {
                     "author": "Dr. Mark",
+                    "authorID": 2,
                     "authorPhoto": "../../users_photos/user2.png",
-                    "when": "last Monday",
+                    "when": "2 weeks ago",
                     "votes": 7,
                     "answer": "Ultrices dui sapien eget mi proin sed libero enim. Nulla facilisi cras fermentum odio eu feugiat. Dolor sed viverra ipsum nunc aliquet bibendum enim facilisis. Semper viverra nam libero justo laoreet sit.",
                     "comments": []
@@ -178,21 +195,25 @@
                 {
                     "type": "commented",
                     "author": "Joseph",
+                    "authorID": 3,
                     "authorPhoto": "../../users_photos/user3.png"
                 },
                 {
                     "type": "commented",
                     "author": "Sofia",
+                    "authorID": 5,
                     "authorPhoto": "../../users_photos/user5.png"
                 },
                 {
                     "type": "commented",
                     "author": "Patricia",
+                    "authorID": 1,
                     "authorPhoto": "../../users_photos/user1.png"
                 },
                 {
                     "type": "answered",
                     "author": "Marie",
+                    "authorID": 4,
                     "authorPhoto": "../../users_photos/user4.png"
                 }
             ],
@@ -203,13 +224,15 @@
             "answeres": [
                 {
                     "author": "Sofia",
+                    "authorID": 5,
                     "authorPhoto": "../../users_photos/user5.png",
-                    "when": "8 days ago",
+                    "when": "5 days ago",
                     "votes": -2,
                     "answer": "Facilisi cras fermentum odio eu feugiat. Dolor sed viverra ipsum nunc aliquet bibendum enim facilisis. Semper viverra nam libero justo laoreet sit.",
                     "comments": [
                         {
                             "author": "Marie",
+                            "authorID": 4,
                             "authorPhoto": "../../users_photos/user4.png",
                             "when": "yesterday",
                             "votes": 9,
@@ -219,14 +242,16 @@
                 },
                 {
                     "author": "Sofia",
+                    "authorID": 5,
                     "authorPhoto": "../../users_photos/user5.png",
-                    "when": "3 days ago",
+                    "when": "8 days ago",
                     "votes": 3,
                     "answer": "Dolor sed viverra ipsum nunc aliquet bibendum enim facilisis. Semper viverra nam libero justo laoreet sit.",
                     "comments": []
                 },
                 {
                     "author": "Patricia",
+                    "authorID": 1,
                     "authorPhoto": "../../users_photos/user1.png",
                     "when": "last Sunday",
                     "votes": 3,
@@ -252,16 +277,19 @@
                 {
                     "type": "commented",
                     "author": "Dr. Mark",
+                    "authorID": 2,
                     "authorPhoto": "../../users_photos/user2.png"
                 },
                 {
                     "type": "commented",
                     "author": "Sofia",
+                    "authorID": 5,
                     "authorPhoto": "../../users_photos/user5.png"
                 },
                 {
                     "type": "answered",
                     "author": "Joseph",
+                    "authorID": 3,
                     "authorPhoto": "../../users_photos/user3.png"
                 }
             ],
@@ -272,13 +300,15 @@
             "answeres": [
                 {
                     "author": "Joseph",
+                    "authorID": 3,
                     "authorPhoto": "../../users_photos/user3.png",
-                    "when": "3 months ago",
+                    "when": "4 months ago",
                     "votes": -4,
                     "answer": "Ultrices dui sapien eget mi proin sed libero enim. Nulla facilisi cras fermentum odio eu feugiat. Dolor sed viverra ipsum nunc aliquet bibendum enim facilisis. Semper viverra nam libero justo laoreet sit.",
                     "comments": [
                         {
                             "author": "Marie",
+                            "authorID": 4,
                             "authorPhoto": "../../users_photos/user4.png",
                             "when": "yesterday",
                             "votes": 1,
@@ -288,16 +318,18 @@
                 },
                 {
                     "author": "Patricia",
+                    "authorID": 1,
                     "authorPhoto": "../../users_photos/user1.png",
-                    "when": "1 year ago",
+                    "when": "11 months ago",
                     "votes": 7,
                     "answer": "Dolor sed viverra ipsum nunc aliquet bibendum enim facilisis. Semper viverra nam libero justo laoreet sit.",
                     "comments": []
                 },
                 {
                     "author": "Dr. Mark",
+                    "authorID": 2,
                     "authorPhoto": "../../users_photos/user2.png",
-                    "when": "11 months ago",
+                    "when": "1 year ago",
                     "votes": 5,
                     "answer": "Sapien eget mi proin sed libero enim. Nulla facilisi cras fermentum odio eu feugiat. Dolor sed viverdfra ipsum nunc aliquet bibendum enim facilisis. Semper viverra nam libero justo laoreet sit.",
                     "comments": []
@@ -321,21 +353,25 @@
                 {
                     "type": "commented",
                     "author": "Dr. Mark",
+                    "authorID": 2,
                     "authorPhoto": "../../users_photos/user2.png"
                 },
                 {
                     "type": "commented",
                     "author": "Marie",
+                    "authorID": 4,
                     "authorPhoto": "../../users_photos/user4.png"
                 },
                 {
                     "type": "commented",
                     "author": "Patricia",
+                    "authorID": 1,
                     "authorPhoto": "../../users_photos/user1.png"
                 },
                 {
                     "type": "answered",
                     "author": "Joseph",
+                    "authorID": 3,
                     "authorPhoto": "../../users_photos/user3.png"
                 }
             ],
@@ -346,14 +382,16 @@
             "answeres": [
                   {
                     "author": "Patricia",
+                    "authorID": 1,
                     "authorPhoto": "../../users_photos/user1.png",
-                    "when": "8 days ago",
+                    "when": "yesterday",
                     "votes": 3,
                     "answer": "Dolor sed viverra ipsum nunc aliquet bibendum enim facilisis. Semper viverra nam libero justo laoreet sit.",
                     "comments": []
                 },
                 {
                     "author": "Joseph",
+                    "authorID": 3,
                     "authorPhoto": "../../users_photos/user3.png",
                     "when": "3 days ago",
                     "votes": 7,
@@ -361,6 +399,7 @@
                     "comments": [
                         {
                             "author": "Marie",
+                            "authorID": 4,
                             "authorPhoto": "../../users_photos/user4.png",
                             "when": "yesterday",
                             "votes": 1,
@@ -370,8 +409,9 @@
                 },
                 {
                     "author": "Marie",
+                    "authorID": 4,
                     "authorPhoto": "../../users_photos/user4.png",
-                    "when": "last Monday",
+                    "when": "last Friday",
                     "votes": 4,
                     "answer": "Ultrices dui sapien eget mi proin sed libero enim. Nulla facilisi cras fermentum odio eu feugiat. Dolor sed viverra ipsum nunc aliquet bibendum enim facilisis. Semper viverra nam libero justo laoreet sit.",
                     "comments": []
@@ -395,16 +435,19 @@
                 {
                     "type": "commented",
                     "author": "Marie",
+                    "authorID": 4,
                     "authorPhoto": "../../users_photos/user4.png"
                 },
                 {
                     "type": "commented",
                     "author": "Patricia",
+                    "authorID": 1,
                     "authorPhoto": "../../users_photos/user1.png"
                 },
                 {
                     "type": "answered",
                     "author": "Dr. Mark",
+                    "authorID": 2,
                     "authorPhoto": "../../users_photos/user2.png"
                 }
             ],
@@ -415,6 +458,7 @@
             "answeres": [
                 {
                     "author": "Joseph",
+                    "authorID": 3,
                     "authorPhoto": "../../users_photos/user3.png",
                     "when": "3 days ago",
                     "votes": 2,
@@ -423,6 +467,7 @@
                 },
                 {
                     "author": "Sofia",
+                    "authorID": 5,
                     "authorPhoto": "../../users_photos/user5.png",
                     "when": "3 days ago",
                     "votes": 3,
@@ -430,6 +475,7 @@
                     "comments": [
                         {
                             "author": "Marie",
+                            "authorID": 4,
                             "authorPhoto": "../../users_photos/user4.png",
                             "when": "2 days ago",
                             "votes": 6,
@@ -439,6 +485,7 @@
                 },
                 {
                     "author": "Dr. Mark",
+                    "authorID": 2,
                     "authorPhoto": "../../users_photos/user2.png",
                     "when": "last Monday",
                     "votes": 7,
@@ -464,16 +511,19 @@
                 {
                     "type": "commented",
                     "author": "Dr. Mark",
+                    "authorID": 2,
                     "authorPhoto": "../../users_photos/user2.png"
                 },
                 {
                     "type": "commented",
                     "author": "Marie",
+                    "authorID": 4,
                     "authorPhoto": "../../users_photos/user4.png"
                 },
                 {
                     "type": "answered",
                     "author": "Joseph",
+                    "authorID": 3,
                     "authorPhoto": "../../users_photos/user3.png"
                 }
             ],
@@ -484,6 +534,7 @@
             "answeres": [
                 {
                     "author": "Joseph",
+                    "authorID": 3,
                     "authorPhoto": "../../users_photos/user3.png",
                     "when": "3 days ago",
                     "votes": -4,
@@ -491,6 +542,7 @@
                     "comments": [
                         {
                             "author": "Marie",
+                            "authorID": 4,
                             "authorPhoto": "../../users_photos/user4.png",
                             "when": "yesterday",
                             "votes": 1,
@@ -500,6 +552,7 @@
                 },
                 {
                     "author": "Sofia",
+                    "authorID": 5,
                     "authorPhoto": "../../users_photos/user5.png",
                     "when": "3 days ago",
                     "votes": 3,
@@ -508,9 +561,168 @@
                 },
                 {
                     "author": "Marie",
+                    "authorID": 4,
                     "authorPhoto": "../../users_photos/user4.png",
                     "when": "last Monday",
                     "votes": 4,
+                    "answer": "Ultrices dui sapien eget mi proin sed libero enim. Nulla facilisi cras fermentum odio eu feugiat. Dolor sed viverra ipsum nunc aliquet bibendum enim facilisis. Semper viverra nam libero justo laoreet sit.",
+                    "comments": []
+                }
+            ]
+        },
+        {
+            "questionID": 8,
+            "question": "Nisl suscipit adipiscing bibendum est uporta non pulvinar?",
+            "author": "Marie",
+            "authorID": 4,
+            "authorPhoto": "../../users_photos/user4.png",
+            "publicationDate": "2016-01-21 08:31:12",
+            "votes": 10,
+            "relatedDiscussions": 2,
+            "peersInvolved": 7,
+            "conversations": 4,
+            "content": "Amet nisl suscipit adipiscing bibendum est ultricies integer. Leo vel orci porta non pulvinar neque laoreet suspendisse interdum. Etiam dignissim diam quis enim lobortis scelerisque. Vitae proin sagittis nisl rhoncus mattis rhoncus. Eu non diam phasellus vestibulum.",
+            "moreActivities": 2,
+            "activities": [
+                {
+                    "type": "commented",
+                    "author": "Dr. Mark",
+                    "authorID": 2,
+                    "authorPhoto": "../../users_photos/user2.png"
+                },
+                {
+                    "type": "commented",
+                    "author": "Sofia",
+                    "authorID": 5,
+                    "authorPhoto": "../../users_photos/user5.png"
+                },
+                {
+                    "type": "answered",
+                    "author": "Joseph",
+                    "authorID": 3,
+                    "authorPhoto": "../../users_photos/user3.png"
+                }
+            ],
+            "lastTimeDiscussed": {
+                "number": 4,
+                "description": "months ago"
+            },
+            "answeres": [
+                {
+                    "author": "Joseph",
+                    "authorID": 3,
+                    "authorPhoto": "../../users_photos/user3.png",
+                    "when": "4 months ago",
+                    "votes": -4,
+                    "answer": "Ultrices dui sapien eget mi proin sed libero enim. Nulla facilisi cras fermentum odio eu feugiat. Dolor sed viverra ipsum nunc aliquet bibendum enim facilisis. Semper viverra nam libero justo laoreet sit.",
+                    "comments": [
+                        {
+                            "author": "Marie",
+                            "authorID": 4,
+                            "authorPhoto": "../../users_photos/user4.png",
+                            "when": "yesterday",
+                            "votes": 1,
+                            "comment": "Ultrices dui sapien eget mi proin sed libero enim. Nulla facilisi cras fermentum odio eu feugiat. Dolor sed viverra ipsum nunc aliquet bibendum enim facilisis. Semper viverra nam libero justo laoreet sit."
+                        }
+                    ]
+                },
+                {
+                    "author": "Patricia",
+                    "authorID": 1,
+                    "authorPhoto": "../../users_photos/user1.png",
+                    "when": "11 months ago",
+                    "votes": 7,
+                    "answer": "Dolor sed viverra ipsum nunc aliquet bibendum enim facilisis. Semper viverra nam libero justo laoreet sit.",
+                    "comments": []
+                },
+                {
+                    "author": "Dr. Mark",
+                    "authorID": 2,
+                    "authorPhoto": "../../users_photos/user2.png",
+                    "when": "1 year ago",
+                    "votes": 5,
+                    "answer": "Sapien eget mi proin sed libero enim. Nulla facilisi cras fermentum odio eu feugiat. Dolor sed viverdfra ipsum nunc aliquet bibendum enim facilisis. Semper viverra nam libero justo laoreet sit.",
+                    "comments": []
+                }
+            ]
+        },
+        {
+            "questionID": 9,
+            "question": "Amet nisl suscipit adipiscing bibendum est ultricies integer?",
+            "author": "Dr. Mark",
+            "authorID": 2,
+            "authorPhoto": "../../users_photos/user2.png",
+            "publicationDate": "2015-03-09 08:13:28",
+            "votes": 20,
+            "relatedDiscussions": 8,
+            "peersInvolved": 3,
+            "conversations": 7,
+            "content": "Phasellus vestibulum. Amet nisl suscipit adipiscing bibendum est ultricies integer. Leo vel orci porta non pulvinar neque laoreet suspendisse interdum. Nulla facilisi cras fermentum odio eu feugiat.",
+            "moreActivities": 2,
+            "activities": [
+                {
+                    "type": "commented",
+                    "author": "Joseph",
+                    "authorID": 3,
+                    "authorPhoto": "../../users_photos/user3.png"
+                },
+                {
+                    "type": "commented",
+                    "author": "Sofia",
+                    "authorID": 5,
+                    "authorPhoto": "../../users_photos/user5.png"
+                },
+                {
+                    "type": "commented",
+                    "author": "Patricia",
+                    "authorID": 1,
+                    "authorPhoto": "../../users_photos/user1.png"
+                },
+                {
+                    "type": "answered",
+                    "author": "Marie",
+                    "authorID": 4,
+                    "authorPhoto": "../../users_photos/user4.png"
+                }
+            ],
+            "lastTimeDiscussed": {
+                "number": 9,
+                "description": "days ago"
+            },
+            "answeres": [
+                {
+                    "author": "Sofia",
+                    "authorID": 5,
+                    "authorPhoto": "../../users_photos/user5.png",
+                    "when": "5 days ago",
+                    "votes": -2,
+                    "answer": "Facilisi cras fermentum odio eu feugiat. Dolor sed viverra ipsum nunc aliquet bibendum enim facilisis. Semper viverra nam libero justo laoreet sit.",
+                    "comments": [
+                        {
+                            "author": "Marie",
+                            "authorID": 4,
+                            "authorPhoto": "../../users_photos/user4.png",
+                            "when": "yesterday",
+                            "votes": 9,
+                            "comment": "Ultrices dui sapien eget mi proin sed libero enim. Nulla facilisi cras fermentum odio eu feugiat. Dolor sed viverra ipsum nunc aliquet bibendum enim facilisis. Semper viverra nam libero justo laoreet sit."
+                        }
+                    ]
+                },
+                {
+                    "author": "Sofia",
+                    "authorID": 5,
+                    "authorPhoto": "../../users_photos/user5.png",
+                    "when": "8 days ago",
+                    "votes": 3,
+                    "answer": "Dolor sed viverra ipsum nunc aliquet bibendum enim facilisis. Semper viverra nam libero justo laoreet sit.",
+                    "comments": []
+                },
+                {
+                    "author": "Patricia",
+                    "authorID": 1,
+                    "authorPhoto": "../../users_photos/user1.png",
+                    "when": "last Sunday",
+                    "votes": 3,
                     "answer": "Ultrices dui sapien eget mi proin sed libero enim. Nulla facilisi cras fermentum odio eu feugiat. Dolor sed viverra ipsum nunc aliquet bibendum enim facilisis. Semper viverra nam libero justo laoreet sit.",
                     "comments": []
                 }

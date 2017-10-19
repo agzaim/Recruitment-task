@@ -1,34 +1,36 @@
 .modal-navigation-container {
-//    padding: 17px 0;
     padding-top: 17px;
     display: flex;
     justify-content: space-between;
     align-items: center;
-//    border: 1px solid green;
 }
+
 
 .modal-arrow {
     height: 30px;
     width: 30px;
     border-radius: 50%;
     font-family: "Courier", serif;
-    //    text-align: center;
     color: #fff;
     font-size: 27px;
     line-height: 30px;
+    background-color: $color-grey-light;
 }
 
 
 .arr-left {
-    background-color: $color-grey-light;
     padding-left: 5px;
 }
 
 
 .arr-right {
-    background-color: $color-blue-dark;
     padding-left: 8px;
+}
 
+
+.activeArrow {
+    background-color: $color-blue-dark;
+    @include hoverEffect;
 }
 
 
@@ -77,6 +79,7 @@
     font-weight: 800;
     margin: 0 auto;
     font-family: $main-serif-font;
+    letter-spacing: 1.5px;
     span {
         font-family: $main-sans-serif-font, sans-serif;
         display: block;

@@ -1,7 +1,7 @@
 <template>
   <transition name="modal">
     <div class="modal-background"  v-on:click.self="$emit('close')">
-            <div class="modal">
+        <div class="modal">
                 <div class="close-mark" v-on:click="$emit('close')">
                     &times;
                 </div>
@@ -36,9 +36,13 @@
                         </div>
                     </div>
                     <div class="modal-navigation-container">
-                        <div class="modal-arrow arr-left">&lt;</div>
+                        <div class="modal-arrow arr-left" v-on:click="modalTrigger(user.userID - 1)" v-bind:class="{activeArrow: (user.userID - 1) >= 1}">
+                            &lt;
+                        </div>
                         <h2>How it all started</h2>
-                        <div class="modal-arrow arr-right">&gt;</div>
+                        <div class="modal-arrow arr-right" v-on:click="modalTrigger(user.userID + 1)" v-bind:class="{activeArrow: user.userID + 1 <= this.users.length }">
+                            &gt;
+                        </div>
                     </div>
                     <p>
                         That's where we have been these 
@@ -142,7 +146,6 @@
                 finding: "finding",
                 question: "question",
                 showModal: false
-//                authorID: 0
             }
         },
 
@@ -159,8 +162,18 @@
                     return user.userID == this.authorID;
                 })[0];
             }
+        },     
+            
+        
+        //following 2 functions hiding and showing the main page scroll when modal is visible
+        created() {
+            window.document.body.classList.add("hideScroll");
         },
-
+        
+        beforeDestroy() {
+            window.document.body.classList.remove("hideScroll");
+        },
+        
         mixins: [methodMixins]
     }
 

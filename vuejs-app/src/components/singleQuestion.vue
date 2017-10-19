@@ -1,8 +1,9 @@
 <template>
-<!--  <div v-bind:class="{hideScroll: showModal}">-->
-  <div class="hideScroll">
+  <div>
     <header>
+        <router-link v-bind:to="'/'">
             <div class="left-arrow">&lt;</div>
+        </router-link>
             <div class="container sng-header-container">
                 <div class="single-title-box">
                     <h3>QUESTION</h3> 
@@ -14,7 +15,6 @@
                         {{ question.lastTimeDiscussed.number }}
                     </span>
                     {{ question.lastTimeDiscussed.description }}
-
                 </p>
                 <div class="clearfix"></div>
             </div>
@@ -62,19 +62,23 @@
                 </div>
             </div>
             <p class="answer-introduction">
-                <span>{{ question.answeres.length }}</span>
+                <span>
+                    {{ question.answeres.length }}
+                </span>
                 {{ activitiesQuantity(question.answeres.length, peer) }} 
                 already answered 
-                <span class="question-author">{{ question.author }}</span>
+                <span class="question-author">
+                    {{ question.author }}
+                </span>
             </p>
             <div class=" container answer-section" v-for="answer in question.answeres">
                 <div class="answer-container">
                     <div class="answer-photo-box">
-                        <img class="user-photo" alt="" v-bind:src="answer.authorPhoto">
+                        <img class="user-photo" alt="" v-bind:src="answer.authorPhoto" v-on:click="modalTrigger(answer.authorID)">
                     </div>
                     <div class="answer-box">
                         <p>
-                            <span class="user-name">
+                            <span class="user-name" v-on:click="modalTrigger(answer.authorID)">
                                 {{ answer.author }}
                             </span>
                             COMMENTED IT
@@ -91,7 +95,9 @@
                     </div>
                     <div class="votes-box">
                         <p>
-                            <span>{{ votesCounter(answer.votes) }}</span>
+                            <span>
+                                {{ votesCounter(answer.votes) }}
+                            </span>
                              {{ votesDescription(answer.votes) }}
                         </p>
                         <div class="voting-arrows-container">
@@ -103,11 +109,11 @@
                 <div class="answer-container comment-container" v-for="comment in answer.comments">
                     <div class="empty-box"></div>
                     <div class="answer-photo-box">
-                        <img class="user-photo" alt="" v-bind:src="comment.authorPhoto">
+                        <img class="user-photo" alt="" v-bind:src="comment.authorPhoto" v-on:click="modalTrigger(comment.authorID)">
                     </div>
                     <div class="answer-box">
                         <p>
-                            <span class="user-name">
+                            <span class="user-name" v-on:click="modalTrigger(comment.authorID)">
                                 {{ comment.author }}
                             </span>
                             COMMENTED IT
@@ -143,7 +149,8 @@
             </div>         
     </div>
   
-<profileView v-if="showModal" v-on:close="showModal = false" v-bind:authorID="authorID"></profileView>
+    <profileView v-if="showModal" v-on:close="showModal = false" v-bind:authorID="authorID"></profileView>
+      
 </div>
 </template>
 
@@ -167,12 +174,6 @@
                 authorID: 0
             }
         },
-    //    created() {
-    //            this.question = this.questions.filter((quest) => {
-    //                return quest.idQ == this.id;
-    //            })[0];
-    //        
-    //    },
         methods: {
             // I couldn't figure out how to hide "COMMENT button" when the answer has comments using olny CSS magic, so I created following funcion. After all it's much better - works also to comment boxes :)
             btnDescription: function(commentsList) {
@@ -202,11 +203,6 @@
                     return "downvotes";
                 }
             }
-            
-//            modalTrigger: function(authorID) {
-//                this.showModal = true,
-//                this.authorID = authorID;
-//            }
         },
         
         computed: {

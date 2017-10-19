@@ -14,7 +14,6 @@ Vue.component("profileView", profileView);
 const router = new VueRouter({
     routes: [
         {path: '/', component: allQuestions},
-//        {path: '/profile', component: profileView},
         {path: '/question/:id', component: singleQuestion}
     ],
     mode: 'history'

@@ -30,7 +30,6 @@
         </div>
         <div class="clearfix"></div>
     </header>
-
     <div class="page-container">
         <div class="container">
             <div class="question-box" v-for="question in visibleQuestions">
@@ -68,14 +67,13 @@
                             <div class="question-box-element-dot"></div>
                         </div>
                         <div class="question-box-element" v-for="activity in question.activities">
-                            <img class="user-photo" alt="" v-bind:src="activity.authorPhoto">
+                            <img class="user-photo" alt="" v-bind:src="activity.authorPhoto" v-on:click="modalTrigger(activity.authorID)">
                             <div class="user-activity-desription">
                                 {{ activity.type }}
                                 <div class="question-box-element-dot"></div>
                             </div>
                         </div>                       
                     </div>
-
                     <div class="question-box-summary">
                         <p>
                             <span> 
@@ -100,10 +98,16 @@
                     </div>
                 </div>
             </div>
+            <div class="pagination-btn-container" v-if="moreToLoad">
+                    <a class="pagination-btn" v-on:click="loadingMore">
+                        load more questions
+                    </a>
+            </div>
         </div>
     </div>
 
 <profileView v-if="showModal" v-on:close="showModal = false" v-bind:authorID="authorID"></profileView>
+    
 </div>
 </template>
 
@@ -128,44 +132,38 @@
                 authorID: 0,
                 activeDateBtn: true,
                 activeVoteBtn: false,
-                visibleQuestions: this.questions.slice(0, 4)
-//                visibleQuestions: this.questions
+                visibleQuestions: this.questions,
+                slicer: 3,
+                moreToLoad: true
             }
         },
-        computed: {
-//            sortingQuestions: function() {
-//                return this.questions.sort((a, b) => {
-//                    return b.publicationDate.localeCompare(a.publicationDate); 
-//                });
-//            }
-//            filteredQuestions: function() {
-//                return this.questions.sort((a, b) => {
-//                    return parseFloat(a.publicationDate) - parseFloat(b.publicationDate);
-//                });
-//            }
-//            visibQuestions: function() {
-//                return this.questions.filter((quest) => {
-//                    return quest.question.match(this.search) != null; 
-//                });                                
-//            }
-        },
         methods: {
+            loadingMore: function() {
+                //button for more loading won't be necessary when all questions will be shown
+                if(this.slicer >= this.questions.length) {
+                    this.moreToLoad = false;
+                }
+                this.visibleQuestions = this.questions.slice(0, this.slicer);
+                this.sortByDate();
+                this.slicer+=3;
+            },
+            
             searchQuestions: function() {
-                this.visibleQuestions = this.questions.filter((quest) => {
+                this.visibleQuestions = this.visibleQuestions.filter((quest) => {
                     return quest.question.toUpperCase().indexOf(this.search.toUpperCase()) > -1;
                 });
             },
             sortByDate: function() {
                 this.activeDateBtn = true;
                 this.activeVoteBtn = false;
-                this.visibleQuestions = this.questions.sort((a, b) => {
+                this.visibleQuestions = this.visibleQuestions.sort((a, b) => {
                     return b.publicationDate.localeCompare(a.publicationDate); 
                 });
             },
             sortByVotes: function() {
                 this.activeDateBtn = false;
                 this.activeVoteBtn = true;
-                this.visibleQuestions = this.questions.sort((a, b) => {
+                this.visibleQuestions = this.visibleQuestions.sort((a, b) => {
                     return b.votes - a.votes;
                 });
             }
@@ -174,7 +172,7 @@
 
         // I assumed that the default display of the questions should be listed by "recent" as this option is active in the sent view  
         beforeMount() {
-            this.sortByDate();
+            this.loadingMore();
         }
     }
 

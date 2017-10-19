@@ -2,9 +2,6 @@
     width: 95%;
     margin: 0 auto;
     background-color: $color-main-background;
-    //    border: 28px solid $main-border-color;
-    //    border-top-width: 0;
-    //    border-bottom-width: 40px;
     box-shadow: 7px 0 5px -4px $color-main-orange-shadow;
     border-bottom: 1px solid $color-main-background;
      @include tablets {
@@ -15,7 +12,6 @@
 
 .container {
     width: 900px;
-    //    width: 70%;
     margin: 0 auto;
     background-color: #fff;
     box-shadow: 9px 0 5px -6px $color-grey-white;

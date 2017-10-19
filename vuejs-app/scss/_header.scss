@@ -12,14 +12,10 @@ header {
         @include mediaHeader {
             width: 90%;
             display: inline-block;
-            //            float: right;
         }
         @include mobiles {
             padding-bottom: 0;
         }
-        //        div {
-        //            display: inline-block;
-        //        }
     }
     h3 {
         display: inline-block;
@@ -41,6 +37,11 @@ header {
     line-height: 40px;
     font-family: Courier, sans-serif;
     border-radius: 50%;
+    &:hover {
+        cursor: pointer;
+        background-color: $color-grey-light;
+        color: #fff;
+    }
     @include mediaHeader {
         position: static;
         display: inline-block;
@@ -52,11 +53,6 @@ header {
         font-size: 25px;
         line-height: 28px;
         margin-top: 4px;
-    }
-    &:hover {
-        background-color: $color-grey-light;
-        color: #fff;
-        cursor: pointer;
     }
 }
 
@@ -86,8 +82,8 @@ header {
     font-family: "Palatino", serif;
     margin-left: 28px;
     font-weight: 100;
-    @include hoverEffect;
 }
+
 
 .header-view-buttons {
     display: inline-block;
@@ -112,6 +108,7 @@ input[type="radio"] {
         margin-left: 23px;
     }
 }
+
 
 .header-sorting-box {
     display: inline-block;
@@ -152,6 +149,7 @@ input[type="radio"] {
         cursor: auto;
     }
 }
+
 
 .search-input {
     width: 76%;
@@ -200,7 +198,6 @@ input[type="radio"] {
     p {
         position: absolute;
         top: 10px;
-//        padding-top: 10px;
         right: 50px;
         @include tablets {
             right: 20px;
@@ -210,6 +207,5 @@ input[type="radio"] {
             left: 40px;
             bottom: 10px;
         }
-        
     }
 }

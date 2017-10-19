@@ -1,4 +1,3 @@
-
 @import "reset";
 @import "fonts";
 @import "variables";
@@ -6,6 +5,7 @@
 @import "containers";
 @import "header";
 @import "questionBox";
+@import "loadingArea";
 @import "singleQuestionHeader";
 @import "singleQuestionBox";
 @import "answerBox";
@@ -15,8 +15,11 @@
 
 
 body {
-    //do wymiany
     font-family: "lunchtype22regular", sans-serif;
-//    font-family: "lunchtype22medium", sans-serif;
     background-color: $color-main-orange;
+}
+
+
+.hideScroll {
+    overflow-y: hidden;
 }
