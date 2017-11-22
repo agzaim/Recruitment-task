@@ -178,5 +178,11 @@
 
 </script>
 
-<style>
+<style lang="scss">
+    div {
+        a {
+            background-color: aqua;
+        }
+        
+    }
 </style>

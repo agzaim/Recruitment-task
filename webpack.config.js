@@ -15,6 +15,8 @@ module.exports = {
         loader: 'vue-loader',
         options: {
           loaders: {
+              test: /\.scss$/,
+              loaders: ["style", "css", "sass"]
           }
           // other vue-loader options go here
         }
