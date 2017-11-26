@@ -1,13 +1,14 @@
 <template>
     <div id="app">
-        <router-view v-bind:questions="questions"></router-view>
+<!--        <router-view v-bind:questions="questions"></router-view>-->
+        <router-view></router-view>
     </div>
 </template>
 
 <script>
-    import allQuestions from "./components/allQuestions.vue";
-    import singleQuestion from "./components/singleQuestion.vue";
-    import questionList from "./data/questions.json";
+    import allQuestions from "./containers/allQuestions.vue";
+    import singleQuestion from "./containers/singleQuestion.vue";
+//    import questionList from "./data/questions.json";
 
 
     export default {
@@ -18,7 +19,7 @@
 
         data() {
             return {
-                questions: questionList.questions         
+//                questions: questionList.questions         
             }
         }
     }

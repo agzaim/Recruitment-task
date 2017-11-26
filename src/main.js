@@ -2,9 +2,10 @@ import Vue from 'vue';
 import App from './App.vue';
 import VueRouter from 'vue-router';
 import VueResource from 'vue-resource';
-import allQuestions from './components/allQuestions.vue';
-import singleQuestion from './components/singleQuestion.vue';
-import profileView from './components/profileView.vue'; 
+import { store } from "./store/store";
+import allQuestions from './containers/allQuestions.vue';
+import singleQuestion from './containers/singleQuestion.vue';
+import profileView from './containers/profileView.vue'; 
 
 Vue.use(VueRouter);
 Vue.use(VueResource);
@@ -21,6 +22,7 @@ const router = new VueRouter({
 
 
 new Vue({
+    store: store,
     el: '#app',
     render: h => h(App),
     router: router
