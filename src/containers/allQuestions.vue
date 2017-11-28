@@ -1,12 +1,25 @@
 <template>
     <div>
-<!--        <main-header></main-header>-->
+         
+        <main-header v-model="search"></main-header>
         <div class="page-container">
             <div class="container">
-                <question-box v-for="question in visibleQuestions" v-bind:key="question.questionID" v-bind:question="question"></question-box>
-                <pagination-btn></pagination-btn>
+              
+                <question-box 
+                    v-for="question in visibleQuestions" 
+                    v-bind:key="question.questionID" 
+                    v-bind:question="question">
+                </question-box>
+                 
+<!--
+                <pagination-btn
+                    v-if="visibleQuestions.length < questions.length">
+                </pagination-btn>
+-->
+                <p>{{ dupa }}</p>
            </div>
-       </div>
+        </div>
+        
 
 <!--<profileView v-if="showModal" v-on:close="showModal = false" v-bind:authorID="authorID"></profileView>-->
     
@@ -37,14 +50,24 @@
                 return this.$store.state.questions;
             },
             visibleQuestions() {
-                return this.$store.getters.visibleQuestions;
+//                return this.$store.state.visibleQuestions;
+                return 
+                this.$store.state.questions.filter((quest) => {
+                    return quest.question.toUpperCase().indexOf(this.search.toUpperCase()) > -1;
+                
+                });
+            
+            },
+            dupa() {
+                return 
+                    this.search + "b"
             }
             
             
         },
         data () {
             return {
-//                search: "",
+                search: "dupa",
 //                discussion: "discussion",
 //                peer: "peer",
 //                conversation: "conversation",
@@ -58,7 +81,7 @@
             }
         },
         methods: {
-            loadingMore: function() {
+          /*  loadingMore: function() {
                 //button for more loading won't be necessary when all questions will be shown
                 if(this.slicer >= this.questions.length) {
                     this.moreToLoad = false;
@@ -66,7 +89,7 @@
                 this.visibleQuestions = this.questions.slice(0, this.slicer);
                 this.sortByDate();
                 this.slicer+=3;
-            },
+            },*/
             
             searchQuestions: function() {
                 this.visibleQuestions = this.visibleQuestions.filter((quest) => {
@@ -93,6 +116,8 @@
         // I assumed that the default display of the questions should be listed by "recent" as this option is active in the sent view  
         beforeMount() {
 //            this.loadingMore();
+            this.$store.commit("loadingPartOfQuestions");
+
         }
     }
 

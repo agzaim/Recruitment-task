@@ -18,7 +18,11 @@
                             </p>
                             <div class="question-box-element-dot"></div>
                         </div>
-                        <user-activity v-for="activity in question.activities" v-bind:key="activity.author" v-bind:activity="activity"></user-activity>     
+                        <user-activity 
+                            v-for="activity in question.activities" 
+                            v-bind:key="activity.author" 
+                            v-bind:activity="activity">
+                        </user-activity>     
                     </div>
                     <div class="question-box-summary">
                         <activities-summary 
