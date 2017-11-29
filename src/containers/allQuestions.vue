@@ -1,7 +1,7 @@
 <template>
     <div>
          
-        <main-header v-model="search"></main-header>
+        <main-header></main-header>
         <div class="page-container">
             <div class="container">
               
@@ -11,12 +11,10 @@
                     v-bind:question="question">
                 </question-box>
                  
-<!--
                 <pagination-btn
                     v-if="visibleQuestions.length < questions.length">
                 </pagination-btn>
--->
-                <p>{{ dupa }}</p>
+
            </div>
         </div>
         
@@ -50,31 +48,27 @@
                 return this.$store.state.questions;
             },
             visibleQuestions() {
-//                return this.$store.state.visibleQuestions;
-                return 
-                this.$store.state.questions.filter((quest) => {
-                    return quest.question.toUpperCase().indexOf(this.search.toUpperCase()) > -1;
-                
-                });
+                return this.$store.state.visibleQuestions;
+//                return 
+//                this.$store.state.questions.filter((quest) => {
+//                    return quest.question.toUpperCase().indexOf(this.search.toUpperCase()) > -1;
+//                
+//                });
             
-            },
-            dupa() {
-                return 
-                    this.search + "b"
             }
+           
             
             
         },
         data () {
             return {
-                search: "dupa",
+                
 //                discussion: "discussion",
 //                peer: "peer",
 //                conversation: "conversation",
 //                showModal: false,
                 authorID: 0,
-                activeDateBtn: true,
-                activeVoteBtn: false,
+              
 //                visibleQuestions: this.questions,
 //                slicer: 3,
                 moreToLoad: true
@@ -91,12 +85,12 @@
                 this.slicer+=3;
             },*/
             
-            searchQuestions: function() {
-                this.visibleQuestions = this.visibleQuestions.filter((quest) => {
-                    return quest.question.toUpperCase().indexOf(this.search.toUpperCase()) > -1;
-                });
-            },
-            sortByDate: function() {
+//            searchQuestions: function() {
+//                this.visibleQuestions = this.visibleQuestions.filter((quest) => {
+//                    return quest.question.toUpperCase().indexOf(this.search.toUpperCase()) > -1;
+//                });
+//            },
+        /*    sortByDate: function() {
                 this.activeDateBtn = true;
                 this.activeVoteBtn = false;
                 this.visibleQuestions = this.visibleQuestions.sort((a, b) => {
@@ -109,15 +103,14 @@
                 this.visibleQuestions = this.visibleQuestions.sort((a, b) => {
                     return b.votes - a.votes;
                 });
-            }
+            }*/
         },
         mixins: [methodMixins],
 
-        // I assumed that the default display of the questions should be listed by "recent" as this option is active in the sent view  
+          
         beforeMount() {
-//            this.loadingMore();
             this.$store.commit("loadingPartOfQuestions");
-
+            this.$store.commit("sortingQuestions");
         }
     }
 

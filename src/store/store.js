@@ -12,9 +12,9 @@ export const store = new Vuex.Store({
 //       search: "",
        visibleQuestions: [],
        showModal: false,
-        slicer: 3
-//       visibleQuestions: .questions,
-       
+       slicer: 3,
+       activeDateBtn: true,
+       activeVoteBtn: false       
    },
    getters: {
 //       visibleQuestions: state => {
@@ -28,18 +28,46 @@ export const store = new Vuex.Store({
 //           }
 //       }
    
-       partOfQuestions: state => {
-           return state.questions.slice(state.visibleQuestions.length, state.visibleQuestions.length + state.slicer);
-       }
-        
+//       partOfQuestions: state => {
+//           return state.questions.slice(state.visibleQuestions.length, state.visibleQuestions.length + state.slicer);
+//       }
+//        
    },
     mutations: {
         loadingPartOfQuestions: state => {
             var partOfQuestions = state.questions.slice(state.visibleQuestions.length, state.visibleQuestions.length + state.slicer);
 
-//            return state.visibleQuestions.concat(partOfQuestions);
             state.visibleQuestions = state.visibleQuestions.concat(partOfQuestions);
 //              this.sortByDate();
+        },
+        searchingQuestions: (state, payload) => {
+            console.log(payload)
+            state.visibleQuestions = state.questions.filter((quest) => {
+                return quest.question.toUpperCase().indexOf(payload.toUpperCase()) > -1;
+            });
+        },
+        sortingQuestions: (state, payload)  => {
+            switch (payload) {
+                case "byDate": 
+                    state.activeDateBtn = true;
+                    state.activeVoteBtn = false;
+                    state.visibleQuestions = state.visibleQuestions.sort((a, b) => {
+                    return b.publicationDate.localeCompare(a.publicationDate); 
+                });
+                    break;
+                case "byVotes":
+                    state.activeDateBtn = false;
+                    state.activeVoteBtn = true;
+                    state.visibleQuestions = state.visibleQuestions.sort((a, b) => {
+                    return b.votes - a.votes;
+                });
+                    break;
+                default:
+                    state.visibleQuestions = state.visibleQuestions.sort((a, b) => {
+                    return b.publicationDate.localeCompare(a.publicationDate); 
+                    });
+            }
         }
     }
+    
 })

@@ -3,16 +3,36 @@
         <div class="left-arrow">&lt;</div>
         <div class="container">
             <header-title></header-title>
-            <radio-buttons></radio-buttons>
-            <sorting-box></sorting-box>
+             <div class="header-view-buttons">
+                <radio-button v-bind:value="myShelf" 
+                              v-bind:checked="checked">
+                    My shelf
+                </radio-button>
+                <radio-button v-bind:value="allQuestions">
+                    All questions
+                </radio-button>
+            </div>
+            <p class="header-sorting-box">
+                Sort by:
+                <sorting-choice v-bind:choice="date"
+                                v-bind:activeBtn="activeDateBtn">
+                    recent
+                </sorting-choice>
+                or 
+                <sorting-choice v-bind:choice="votes"
+                                v-bind:activeBtn="activeVoteBtn">
+                    hot
+                </sorting-choice>
+            </p>
             <div class="clearfix"></div>
             <input class="search-input" 
                    type="search" 
                    placeholder="Search questions" 
-                   v-model="searchWord">
-            <input class="search-btn" type="submit" value="SEARCH" >
-                   
-<!--                   v-on:click="searchQuestions">-->
+                   v-model="search">
+            <input class="search-btn" 
+                   type="submit" 
+                   value="SEARCH" 
+                   v-on:click="searchQuestions(search)">
             <div class="clearfix"></div>
         </div>
         <div class="clearfix"></div>
@@ -21,46 +41,53 @@
 
 <script>
     import headerTitle from "./subcomponents/header-title.vue";
-    import radioButtons from "./subcomponents/radio-buttons.vue";
-    import sortingBox from "./subcomponents/sorting-box.vue";
+    import radioButton from "./subcomponents/radio-button.vue";
+    import sortingChoice from "./subcomponents/sorting-choice.vue";
  
     export default {
-        props: {
-            search: {
-                type: String
-            }
-        },
         data() {
             return {
-                searchWord: ""
+                search: "",
+                myShelf: "myShelf",
+                allQuestions: "allQuestions",
+                checked: true,
+                date: "byDate",
+                votes: "byVotes"
             }
         },
         components: {
             "headerTitle": headerTitle,
-            "radioButtons": radioButtons,
-            "sortingBox": sortingBox
+            "radioButton": radioButton,
+            "sortingChoice": sortingChoice
         },
-        watch: {
-            "searchWord": function() {
-                this.$emit("input", this.searchWord);
+        
+
+        computed: {
+            activeDateBtn() {
+                return this.$store.state.activeDateBtn;
+            },
+            activeVoteBtn() {
+                return this.$store.state.activeVoteBtn;
             }
-        },
-        created: function() {
-    // We initially sync the internalValue with the value passed in by the parent
-    this.searchWord = this.search;
-  },
-//        computed: {
 //            visibleQuestions() {
 //                this.$store.state.visibleQuestions.filter((quest) => {
 //                    return quest.question.toUpperCase().indexOf(this.search.toUpperCase()) > -1;
 //                });
 //            }
-//        }
+        },
         methods: {
-            searchQuestions() {
-                this.$store.state.visibleQuestions = this.$store.state.questions.filter((quest) => {
-                    return quest.question.toUpperCase().indexOf(this.search.toUpperCase()) > -1;
-                });
+//            searchQuestions() {
+//                this.$store.state.visibleQuestions = this.$store.state.questions.filter((quest) => {
+//                    return quest.question.toUpperCase().indexOf(this.search.toUpperCase()) > -1;
+//            });
+                
+                
+                
+            searchQuestions(searchWord) {
+                this.$store.commit("searchingQuestions", searchWord);
+//                this.$store.state.visibleQuestions = this.$store.state.questions.filter((quest) => {
+//                    return quest.question.toUpperCase().indexOf(this.search.toUpperCase()) > -1;
+//                });
             }
         }
     }
