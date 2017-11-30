@@ -9,8 +9,8 @@ Vue.use(Vuex);
 export const store = new Vuex.Store({
    state: {
        questions: questionList.questions,
-//       search: "",
        visibleQuestions: [],
+       chosenQuestion: {},
        showModal: false,
        slicer: 3,
        activeDateBtn: true,
@@ -41,10 +41,14 @@ export const store = new Vuex.Store({
 //              this.sortByDate();
         },
         searchingQuestions: (state, payload) => {
-            console.log(payload)
             state.visibleQuestions = state.questions.filter((quest) => {
                 return quest.question.toUpperCase().indexOf(payload.toUpperCase()) > -1;
             });
+        },
+        choosingQuestion: (state, payload) => {
+            state.chosenQuestion = state.questions.filter((question) => {
+                return question.questionID == payload;
+            })[0];
         },
         sortingQuestions: (state, payload)  => {
             switch (payload) {

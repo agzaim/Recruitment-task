@@ -1,8 +1,8 @@
 <template>
     <header>
-        <div class="left-arrow">&lt;</div>
+        <navigation-arrow></navigation-arrow>
         <div class="container">
-            <header-title></header-title>
+            <header-title v-bind:mainHeader="classBind"></header-title>
              <div class="header-view-buttons">
                 <radio-button v-bind:value="myShelf" 
                               v-bind:checked="checked">
@@ -40,6 +40,7 @@
 </template>
 
 <script>
+    import navigationArrow from "./subcomponents/navigation-arrow.vue";
     import headerTitle from "./subcomponents/header-title.vue";
     import radioButton from "./subcomponents/radio-button.vue";
     import sortingChoice from "./subcomponents/sorting-choice.vue";
@@ -51,11 +52,13 @@
                 myShelf: "myShelf",
                 allQuestions: "allQuestions",
                 checked: true,
+                classBind: true,
                 date: "byDate",
                 votes: "byVotes"
             }
         },
         components: {
+            "navigationArrow": navigationArrow,
             "headerTitle": headerTitle,
             "radioButton": radioButton,
             "sortingChoice": sortingChoice

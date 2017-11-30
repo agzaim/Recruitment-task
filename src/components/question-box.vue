@@ -37,29 +37,6 @@
                             v-bind:quantity="question.conversations"
                             v-bind:description="conversation"
                         ></activities-summary>
-                        
-<!--
-                        <p>
-                            <span> 
-                                {{ question.relatedDiscussions }}
-                            </span> 
-                            related 
-                            {{ activitiesQuantity(question.relatedDiscussions, discussion) }}
-                        </p> 
-                        <p>
-                            <span>
-                                {{ question.peersInvolved }}
-                            </span> 
-                            {{ activitiesQuantity(question.peersInvolved, peer) }} 
-                            involved
-                        </p> 
-                        <p>
-                            <span>
-                                {{ question.conversations }}
-                            </span> 
-                            {{ activitiesQuantity(question.conversations, conversation) }} 
-                        </p> -->
-
                     </div> 
                 </div> 
             </div>

@@ -1,25 +1,6 @@
 <template>
   <div>
-    <header>
-        <router-link v-bind:to="'/'">
-            <div class="left-arrow">&lt;</div>
-        </router-link>
-            <div class="container sng-header-container">
-                <div class="single-title-box">
-                    <h3>QUESTION</h3> 
-                    <div class="plus-mark">+</div>
-                </div>
-                <p class="discussion-timer">
-                    Last time discussed
-                    <span> 
-                        {{ question.lastTimeDiscussed.number }}
-                    </span>
-                    {{ question.lastTimeDiscussed.description }}
-                </p>
-                <div class="clearfix"></div>
-            </div>
-            <div class="clearfix"></div>
-    </header>
+    <single-question-header></single-question-header>
     <div class="page-container">
             <div class="container">
                 <div class="question-box single-question-box">
@@ -157,22 +138,28 @@
 <script>
 
     import methodMixins from "../mixins/methodMixins";
+     import singleQuestionHeader from "../components/single-question-header.vue";
 
     export default {
          props: {
-            questions: {
-                    type: Array,
-                    required: true
-            }
+//            questions: {
+//                    type: Array,
+//                    required: true
+//            }
         },
         data () {
             return {
-                id: this.$route.params.id,
+                id: "",
+//                id: this.$route.params.id,
                 peer: "peer",
                 unfollowBtn: "unfollow",
                 showModal: false,
                 authorID: 0
             }
+        },
+        components: {
+            "singleQuestionHeader": singleQuestionHeader
+
         },
         methods: {
             // I couldn't figure out how to hide "COMMENT button" when the answer has comments using olny CSS magic, so I created following funcion. After all it's much better - works also to comment boxes :)
@@ -206,13 +193,19 @@
         },
         
         computed: {
-            question: function() {
-                return this.questions.filter((quest) => {
-                    return quest.questionID == this.id;
-                })[0];
+//            question: function() {
+//                return this.questions.filter((quest) => {
+//                    return quest.questionID == this.id;
+//                })[0];
+//            }
+            question() {
+                return this.$store.state.chosenQuestion;
             }
         },
-        
+        mounted() {
+            this.id = this.$route.params.id;
+            this.$store.commit("choosingQuestion", this.id);
+        },
         mixins: [methodMixins]
     }
 
