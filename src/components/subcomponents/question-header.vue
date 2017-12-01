@@ -4,9 +4,12 @@
         <user-photo v-bind:src="question.authorPhoto"></user-photo>
         <div class="question-box-header-content">
             <p>
+                <user-name v-bind:name="question.author"></user-name>
+<!--
                 <span class="user-name" v-on:click="modalTrigger(question.authorID)"> 
                     {{ question.author }}
                 </span>
+-->
                 IS ASKING:
             </p>
             <router-link v-bind:to="'/question/' + question.questionID">
@@ -20,6 +23,7 @@
 
 <script>
     import userPhoto from "./user-photo.vue";
+    import userName from "./user-name.vue";
 
     export default {
          props: {
@@ -29,7 +33,8 @@
             }
         },
         components: {
-            "userPhoto": userPhoto
+            "userPhoto": userPhoto,
+            "userName": userName
         }
     }
 </script>
