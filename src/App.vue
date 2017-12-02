@@ -1,25 +1,28 @@
 <template>
     <div id="app">
-<!--        <router-view v-bind:questions="questions"></router-view>-->
         <router-view></router-view>
+        <profileView v-if="showModal" 
+                     v-on:close="showModal = false"
+                     v-bind:authorID="authorID">
+        </profileView>
     </div>
 </template>
 
 <script>
-    import allQuestions from "./containers/allQuestions.vue";
-    import singleQuestion from "./containers/singleQuestion.vue";
-//    import questionList from "./data/questions.json";
+    import profileView from "./containers/profileView.vue";
+
 
 
     export default {
         components: {
-            "allQuestions": allQuestions,
-            "singleQuestion": singleQuestion
+            "profileView": profileView
         },
-
-        data() {
-            return {
-//                questions: questionList.questions         
+        computed: {
+            showModal() {
+                return this.$store.state.showModal;
+            },
+            authorID() {
+                return this.$store.state.authorID;
             }
         }
     }

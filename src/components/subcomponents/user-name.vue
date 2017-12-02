@@ -1,7 +1,7 @@
 <template>
     <span class="user-name" 
-          v-on:click="modalTrigger(question.authorID)"> 
-        {{ name }}
+          v-on:click="modalTrigger(input.authorID)"> 
+        {{ input.author }}
     </span>
 </template>
 
@@ -9,10 +9,15 @@
 
     export default {
          props: {
-            name: {
-                type: String,
+            input: {
+                type: Object,
                 required: true
             }
+         },
+         methods: {
+             modalTrigger(autID) {
+                this.$store.commit("modalTrigger", autID);
+             }
          }
     }
 </script>

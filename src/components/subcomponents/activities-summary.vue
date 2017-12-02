@@ -14,6 +14,7 @@
 </template>
 
 <script>
+    import methodMixins from "../../mixins/methodMixins";
     
     export default {
         props: {
@@ -26,16 +27,7 @@
                 required: true
             }      
         },
-        methods: {
-            activitiesQuantity: function(quantity, description) {
-                if (quantity == 1) {
-                    return description;
-                } else {
-                    return description + "s";
-                }
-           }
-           
-        }   
+        mixins: [methodMixins]
     }
 </script>
 <style>

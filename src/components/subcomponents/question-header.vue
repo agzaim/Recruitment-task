@@ -1,18 +1,14 @@
 <template>
     <div class="question-box-header">
-<!--        <img class="user-photo" alt="" v-bind:src="question.authorPhoto" v-on:click="modalTrigger(question.authorID)">    -->
-        <user-photo v-bind:src="question.authorPhoto"></user-photo>
+        <user-photo v-bind:input="question"></user-photo>
         <div class="question-box-header-content">
             <p>
-                <user-name v-bind:name="question.author"></user-name>
-<!--
-                <span class="user-name" v-on:click="modalTrigger(question.authorID)"> 
-                    {{ question.author }}
-                </span>
--->
+                <user-name v-bind:input="question"></user-name>
                 IS ASKING:
             </p>
-            <router-link v-bind:to="'/question/' + question.questionID">
+            <router-link v-bind:to="'/question/' + question.questionID" >
+                         
+<!--                         v-on:click.native="choosingQuestion(question.questionID)">-->
                 <h4>
                     {{ question.question }}
                 </h4>
@@ -35,6 +31,11 @@
         components: {
             "userPhoto": userPhoto,
             "userName": userName
+        },
+        methods: {
+            choosingQuestion(qID) {
+                 this.$store.commit("choosingQuestion", qID);
+            }
         }
     }
 </script>

@@ -1,12 +1,6 @@
 .answer-introduction {
     @include acivitiesFontStyle;
     color: $color-almost-black;
-    .question-author {
-        font-weight: 800;
-        font-family: $main-serif-font;
-        letter-spacing: 1px;
-        font-size: 14px;
-    }
 }
 
 .answer-section {

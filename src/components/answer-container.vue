@@ -2,17 +2,17 @@
     <div class=" container answer-section">
             <div class="answer-container">
                 <div class="answer-photo-box">
-                    <user-photo v-bind:src="answer.authorPhoto"></user-photo>
+                    <user-photo v-bind:input="answer"></user-photo>
                 </div>
-                <answer-box v-bind:activity="answer"></answer-box>
+                <answer-box v-bind:input="answer"></answer-box>
                 <votes-box v-bind:votes="answer.votes"></votes-box>
             </div>
             <div class="answer-container comment-container" v-for="comment in answer.comments">
                 <div class="empty-box"></div>
                 <div class="answer-photo-box">
-                    <user-photo v-bind:src="comment.authorPhoto"></user-photo>
+                    <user-photo v-bind:input="comment"></user-photo>
                 </div>
-                <answer-box v-bind:activity="comment"></answer-box>
+                <answer-box v-bind:input="comment"></answer-box>
                 <votes-box v-bind:votes="comment.votes"></votes-box>
             </div>
             <reaction-btn v-bind:commentsLength="answer.comments.length">

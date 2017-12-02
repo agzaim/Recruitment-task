@@ -5,15 +5,17 @@
             <div class="container">
                 <single-question-box></single-question-box>
             </div>
-            <p class="answer-introduction">
+            <p class="answer-introduction" 
+               v-if="question.answeres.length > 0">
                 <span>
                     {{ question.answeres.length }}
                 </span>
                 {{ activitiesQuantity(question.answeres.length, peer) }} 
-                already answered 
-                <span class="question-author">
-                    {{ question.author }}
-                </span>
+                already answered   
+                {{ question.author }}
+            </p>
+            <p class="answer-introduction" v-else>
+                No one answered {{ question.author }} yet
             </p>
             <answer-container 
                 v-for="answer in question.answeres" 
@@ -29,7 +31,7 @@
 
 <script>
 
-    import methodMixins from "../mixins/methodMixins";
+     import methodMixins from "../mixins/methodMixins";
      import singleQuestionHeader from "../components/single-question-header.vue";
      import singleQuestionBox from "../components/single-question-box.vue";
      import answerContainer from "../components/answer-container.vue";
@@ -47,8 +49,8 @@
 //                id: this.$route.params.id,
                 peer: "peer",
 //                unfollowBtn: "unfollow",
-                showModal: false,
-                authorID: 0
+//                showModal: false,
+//                authorID: 0
             }
         },
         components: {
@@ -98,7 +100,7 @@
                 return this.$store.state.chosenQuestion;
             }
         },
-        mounted() {
+        beforeMount() {
             this.id = this.$route.params.id;
             this.$store.commit("choosingQuestion", this.id);
         },

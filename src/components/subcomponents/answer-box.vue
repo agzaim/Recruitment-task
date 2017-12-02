@@ -1,22 +1,17 @@
 <template>
     <div class="answer-box">
         <p>
-            <user-name v-bind:name="activity.author"></user-name>
-<!--
-            <span class="user-name" v-on:click="modalTrigger(answer.authorID)">
-                {{ activity.author }}
-            </span>
--->
+            <user-name v-bind:input="input"></user-name>
             COMMENTED IT
             <span class="middle-dot">
                 &middot;
             </span>
             <span class="answer-time">
-                {{ activity.when }}
+                {{ input.when }}
             </span>
         </p>
         <div class="longer-text">
-            {{ activity.content }}
+            {{ input.content }}
         </div>
     </div>
 </template>
@@ -27,7 +22,7 @@
 
       export default {
          props: {
-              activity: {
+              input: {
                     type: Object,
                     required: true
               }
