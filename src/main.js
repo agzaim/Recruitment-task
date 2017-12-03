@@ -5,12 +5,11 @@ import VueResource from 'vue-resource';
 import { store } from "./store/store";
 import allQuestions from './containers/allQuestions.vue';
 import singleQuestion from './containers/singleQuestion.vue';
-import profileView from './containers/profileView.vue'; 
+
 
 Vue.use(VueRouter);
 Vue.use(VueResource);
 
-Vue.component("profileView", profileView);
 
 const router = new VueRouter({
     routes: [

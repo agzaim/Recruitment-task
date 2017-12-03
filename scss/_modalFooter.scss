@@ -13,15 +13,15 @@
         left: 47%;
         top: -26px;
     }
-    p {
-        font-size: 11px;
-        margin-bottom: 2px;
-        span {
-            padding-right: 6px;
-            text-transform: none;
-            font-weight: 100;
-        }
-    }
+//    p {
+//        font-size: 11px;
+//        margin-bottom: 2px;
+//        span {
+//            padding-right: 6px;
+//            text-transform: none;
+//            font-weight: 100;
+//        }
+//    }
     h4 {
         font-size: 20px;
         letter-spacing: 1.5px;
@@ -34,6 +34,10 @@
     }
 }
 
+.footer-subtitle {
+    font-size: 11px;
+    margin-bottom: 2px;
+}
 
 .footer-statistics-container {
     display: flex;

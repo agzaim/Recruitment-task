@@ -1,9 +1,9 @@
 {
     "users": [
         {
-            "userID": 1,
-            "userName": "Patricia",
-            "userPhoto": "../../users_photos/user1.png",
+            "authorID": 1,
+            "author": "Patricia",
+            "authorPhoto": "../../users_photos/user1.png",
             "membershipPeriod": "6 months",
             "lastVisit": "Sunday afternoon",
             "activityLevel": 2,
@@ -13,26 +13,26 @@
             "questionNumber": 8,
             "otherPeers": [
                 {
-                    "userName": "Marie",
-                    "userID": 4,
-                    "userPhoto": "../../users_photos/user4.png"
+                    "author": "Marie",
+                    "authorID": 4,
+                    "authorPhoto": "../../users_photos/user4.png"
                 },
                 {
-                    "userName": "Sofia",
-                    "userID": 5,
-                    "userPhoto": "../../users_photos/user5.png"
+                    "author": "Sofia",
+                    "authorID": 5,
+                    "authorPhoto": "../../users_photos/user5.png"
                 },
                 {
-                    "userName": "Joseph",
-                    "userID": 3,
-                    "userPhoto": "../../users_photos/user3.png"
+                    "author": "Joseph",
+                    "authorID": 3,
+                    "authorPhoto": "../../users_photos/user3.png"
                 }
             ]
         },
         {
-            "userID": 2,
-            "userName": "Dr. Mark",
-            "userPhoto": "../../users_photos/user2.png",
+            "authorID": 2,
+            "author": "Dr. Mark",
+            "authorPhoto": "../../users_photos/user2.png",
             "membershipPeriod": "1 year",
             "lastVisit": "Last Friday",
             "activityLevel": 3,
@@ -42,26 +42,26 @@
             "questionNumber": 11,
             "otherPeers": [
                 {
-                    "userName": "Patricia",
-                    "userID": 1,
-                    "userPhoto": "../../users_photos/user1.png"
+                    "author": "Patricia",
+                    "authorID": 1,
+                    "authorPhoto": "../../users_photos/user1.png"
                 },
                 {
-                    "userName": "Joseph",
-                    "userID": 3,
-                    "userPhoto": "../../users_photos/user3.png"
+                    "author": "Joseph",
+                    "authorID": 3,
+                    "authorPhoto": "../../users_photos/user3.png"
                 },
                 {
-                    "userName": "Sofia",
-                    "userID": 5,
-                    "userPhoto": "../../users_photos/user5.png"
+                    "author": "Sofia",
+                    "authorID": 5,
+                    "authorPhoto": "../../users_photos/user5.png"
                 }
             ]
         },
         {
-            "userID": 3,
-            "userName": "Joseph",
-            "userPhoto": "../../users_photos/user3.png",
+            "authorID": 3,
+            "author": "Joseph",
+            "authorPhoto": "../../users_photos/user3.png",
             "membershipPeriod": "3 months",
             "lastVisit": "Monday morning",
             "activityLevel": 1,
@@ -71,26 +71,26 @@
             "questionNumber": 1,
             "otherPeers": [
                 {
-                    "userName": "Marie",
-                    "userID": 4,
-                    "userPhoto": "../../users_photos/user4.png"
+                    "author": "Marie",
+                    "authorID": 4,
+                    "authorPhoto": "../../users_photos/user4.png"
                 },
                 {
-                    "userName": "Patricia",
-                    "userID": 1,
-                    "userPhoto": "../../users_photos/user1.png"
+                    "author": "Patricia",
+                    "authorID": 1,
+                    "authorPhoto": "../../users_photos/user1.png"
                 },
                 {
-                    "userName": "Dr. Mark",
-                    "userID": 2,
-                    "userPhoto": "../../users_photos/user2.png"
+                    "author": "Dr. Mark",
+                    "authorID": 2,
+                    "authorPhoto": "../../users_photos/user2.png"
                 }
             ]
         },
         {
-            "userID": 4,
-            "userName": "Marie",
-            "userPhoto": "../../users_photos/user4.png",
+            "authorID": 4,
+            "author": "Marie",
+            "authorPhoto": "../../users_photos/user4.png",
             "membershipPeriod": "7 months",
             "lastVisit": "Last month",
             "activityLevel": 1,
@@ -100,26 +100,26 @@
             "questionNumber": 4,
             "otherPeers": [
                 {
-                    "userName": "Dr. Mark",
-                    "userID": 2,
-                    "userPhoto": "../../users_photos/user2.png"
+                    "author": "Dr. Mark",
+                    "authorID": 2,
+                    "authorPhoto": "../../users_photos/user2.png"
                 },
                 {
-                    "userName": "Joseph",
-                    "userID": 3,
-                    "userPhoto": "../../users_photos/user3.png"
+                    "author": "Joseph",
+                    "authorID": 3,
+                    "authorPhoto": "../../users_photos/user3.png"
                 },
                 {
-                    "userName": "Sofia",
-                    "userID": 5,
-                    "userPhoto": "../../users_photos/user5.png"
+                    "author": "Sofia",
+                    "authorID": 5,
+                    "authorPhoto": "../../users_photos/user5.png"
                 }
             ]
         },
         {
-            "userID": 5,
-            "userName": "Sofia",
-            "userPhoto": "../../users_photos/user5.png",
+            "authorID": 5,
+            "author": "Sofia",
+            "authorPhoto": "../../users_photos/user5.png",
             "membershipPeriod": "2 years",
             "lastVisit": "Saturday evening",
             "activityLevel": 3,
@@ -129,19 +129,19 @@
             "questionNumber": 1,
             "otherPeers": [
                 {
-                    "userName": "Patricia",
-                    "userID": 1,
-                    "userPhoto": "../../users_photos/user1.png"
+                    "author": "Patricia",
+                    "authorID": 1,
+                    "authorPhoto": "../../users_photos/user1.png"
                 },
                 {
-                    "userName": "Dr. Mark",
-                    "userID": 2,
-                    "userPhoto": "../../users_photos/user2.png"
+                    "author": "Dr. Mark",
+                    "authorID": 2,
+                    "authorPhoto": "../../users_photos/user2.png"
                 },
                 {
-                    "userName": "Marie",
-                    "userID": 4,
-                    "userPhoto": "../../users_photos/user4.png"
+                    "author": "Marie",
+                    "authorID": 4,
+                    "authorPhoto": "../../users_photos/user4.png"
                 }
             ]
         }

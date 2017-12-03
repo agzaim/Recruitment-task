@@ -2,8 +2,7 @@
     <img class="user-photo" 
          alt="" 
          v-bind:src="input.authorPhoto"
-         on:click="modalTrigger(input.authorID)">
-<!--    <img class="user-photo" alt="" v-bind:src="activity.authorPhoto" v-on:click="modalTrigger(activity.authorID)">-->
+         v-on:click="modalTrigger(input.authorID)">
 </template>
 
 <script>

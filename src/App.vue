@@ -1,17 +1,19 @@
 <template>
     <div id="app">
         <router-view></router-view>
-        <profileView v-if="showModal" 
-                     v-on:close="showModal = false"
+        <profile-view v-if="showModal">
+                    
+<!--
                      v-bind:authorID="authorID">
-        </profileView>
+             v-on:close="showModal = false"
+-->
+        </profile-view>
     </div>
 </template>
 
 <script>
-    import profileView from "./containers/profileView.vue";
-
-
+    
+    import profileView from "./components/profile-view.vue";
 
     export default {
         components: {
@@ -20,10 +22,10 @@
         computed: {
             showModal() {
                 return this.$store.state.showModal;
-            },
-            authorID() {
-                return this.$store.state.authorID;
             }
+//            authorID() {
+//                return this.$store.state.authorID;
+//            }
         }
     }
 

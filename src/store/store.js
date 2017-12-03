@@ -88,11 +88,14 @@ export const store = new Vuex.Store({
         modalTrigger: (state, payload) => {
             state.showModal = true;
             state.chosenUser = state.users.filter((user) => {
-                    return user.userID == payload;
+                    return user.authorID == payload;
                 })[0];
 //                state.authorID = payload;
-        }
+        },
         
-        
+        closingModal: state => {
+            state.showModal = false;
+            state.chosenUser = "";
+        }        
     }
 })
