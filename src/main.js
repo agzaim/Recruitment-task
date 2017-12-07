@@ -2,9 +2,8 @@ import Vue from 'vue';
 import App from './App.vue';
 import VueRouter from 'vue-router';
 import VueResource from 'vue-resource';
-import { store } from "./store/store";
-import allQuestions from './containers/allQuestions.vue';
-import singleQuestion from './containers/singleQuestion.vue';
+import { routes } from './routes';
+import { store } from './store/store';
 
 
 Vue.use(VueRouter);
@@ -12,11 +11,8 @@ Vue.use(VueResource);
 
 
 const router = new VueRouter({
-    routes: [
-        {path: '/', component: allQuestions},
-        {path: '/question/:id', component: singleQuestion}
-    ],
-    mode: 'history'
+    mode: 'history',
+    routes: routes
 });
 
 

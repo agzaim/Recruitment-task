@@ -1,12 +1,12 @@
-.modal-navigation-container {
+/*.modal-navigation-container {
     padding-top: 17px;
     display: flex;
     justify-content: space-between;
     align-items: center;
-}
+}*/
 
 
-.modal-arrow {
+/*.modal-arrow {
     height: 30px;
     width: 30px;
     border-radius: 50%;
@@ -25,16 +25,16 @@
 
 .arr-right {
     padding-left: 8px;
-}
+}*/
 
 
-.activeArrow {
+/*.activeArrow {
     background-color: $color-blue-dark;
     @include hoverEffect;
-}
+}*/
 
 
-.statistics-squares-container {
+/*.statistics-squares-container {
     width: 72%;
     margin: 42px auto;
     display: flex;
@@ -43,8 +43,9 @@
     @include mobiles {
         width: 220px;
     }
-}
+}*/
 
+/*
 
 .statistics-square {
     height: 90px;
@@ -72,14 +73,16 @@
         }
     }
 }
+*/
 
-.statistics-square-content {
+/*.statistics-square-content {
     text-align: center;
     font-size: 14px;
     font-weight: 800;
     margin: 0 auto;
     font-family: $main-serif-font;
-    letter-spacing: 1.5px;
+    letter-spacing: 1.5px;*/
+/*
     span {
         font-family: $main-sans-serif-font, sans-serif;
         display: block;
@@ -89,9 +92,10 @@
         letter-spacing: 1px;
     }
 }
+*/
 
 
-.modal-user-container {
+/*.modal-user-container {
     width: 48%;
     display: flex;
     justify-content: space-between;
@@ -100,9 +104,10 @@
     @include mobiles {
         width: 80%;
     }
-}
+}*/
 
 
+/*
 .user-photo-frame {
     height: 90px;
     width: 90px;
@@ -111,6 +116,7 @@
     align-items: center;
     margin-bottom: 5px;
 }
+*/
 
 
 

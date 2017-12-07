@@ -23,12 +23,3 @@
 }
 
 
-
-.modal-container {
-    width: 70%;
-    margin: 0 auto;
-    background-color: #fff;
-     @include tablets {
-        width: 90%;
-    }
-}

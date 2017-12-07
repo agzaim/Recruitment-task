@@ -1,5 +1,5 @@
 <template>
-    <div class="header-view-buttons">
+    <span>
             <input type="radio" 
                    name="viewType" 
                    value="value"
@@ -7,7 +7,7 @@
             <label>
                 <slot></slot>
             </label>
-    </div>
+   </span> 
 </template>
 
 <script>
@@ -22,6 +22,24 @@ export default {
         }
 }
 </script>
-<style>
+
+<style lang="scss">
+    
+/*@import "../../../scss/fonts.scss";
+@import "../../../scss/mixins.scss";
+@import "../../../scss/variables.scss";*/
+    
+/*@import "../../assets/styles/scss/fonts.scss";*/
+@import "../../assets/styles/scss/mixins.scss";
+@import "../../assets/styles/scss/variables.scss";
+
+input[type="radio"] {
+    margin-left: 26px;
+    margin-right: 5px;
+    @include mobiles {
+        margin-left: 23px;
+    }
+}
+    
     
 </style>

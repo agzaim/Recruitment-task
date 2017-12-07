@@ -1,9 +1,9 @@
-.single-question-box {
-    position: relative;
+//.single-question-box {
+   /* position: relative;
     padding-bottom: 0;
     margin-bottom: 55px;
-    border-top: 0;
-    .question-box-header {
+    border-top: 0;*/
+    /*.question-box-header {
         width: 100%;
         @include mobiles {
             box-shadow: 0 8px 7px -7px $color-grey-light inset;
@@ -17,13 +17,13 @@
                 padding: 35px 0 26px 85px;
             }
         }
-    }
-    .user-photo {
-        position: absolute;
-        left: 2%;
-        top: 20px;
-    }
-    h4 {
+    }*/
+//   /* .user-photo {
+//        position: absolute;
+//        left: 2%;
+//        top: 20px;
+//    }*/
+    /*h4 {
         padding-left: 95px;
         &:hover {
             cursor: auto;
@@ -34,10 +34,10 @@
             padding-left: 20px;
             border-top: 1px solid white;
         }
-    }
+    }*/
 }
 
-
+/*
 .unfollow-btn {   
     position: absolute;
     padding-top: 35px;
@@ -52,19 +52,19 @@
         bottom: 39px;
         left: 15px;
     }
-}
+}*/
 
 
-.question-background {
+/*.question-background {
     width: 100%;
     display: flex;
     @include mobiles {
         display: block;
     }
-}
+}*/
 
 
-.blue-block {
+/*.blue-block {
     width: 11%;
     background-color: $color-blue-light;
     @include mobiles {
@@ -85,8 +85,9 @@
         padding: 10px;
         font-size: 14px;
     }
-}
+}*/
 
+/*
 
 .votes-box {
     display: flex;
@@ -123,8 +124,9 @@
     border-top: 10px solid $color-blue-dark;
 }
 
+*/
 
-.btn-container {
+/*.btn-container {
     position: absolute;
     bottom: -16px;
     width: 100%;
@@ -143,5 +145,5 @@
     &:hover {
         @include btnHoverEffect;
     }
-}
+}*/
 

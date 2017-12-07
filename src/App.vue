@@ -1,13 +1,7 @@
 <template>
     <div id="app">
         <router-view></router-view>
-        <profile-view v-if="showModal">
-                    
-<!--
-                     v-bind:authorID="authorID">
-             v-on:close="showModal = false"
--->
-        </profile-view>
+        <profile-view v-if="showModal"></profile-view>
     </div>
 </template>
 
@@ -23,14 +17,13 @@
             showModal() {
                 return this.$store.state.showModal;
             }
-//            authorID() {
-//                return this.$store.state.authorID;
-//            }
         }
     }
 
 </script>
 
-<style>
+<style lang="scss">
 
+@import "./assets/styles/scss/main.scss";
+        
 </style>

@@ -1,5 +1,7 @@
+@import "variables";
+
 @mixin acivitiesFontStyle {
-   text-align: center;
+    text-align: center;
     color: $color-grey-dark;
     font-weight: 800;
     font-family: $main-serif-font;

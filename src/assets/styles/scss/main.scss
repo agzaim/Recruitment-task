@@ -1,0 +1,17 @@
+@import "reset";
+//@import "fonts";
+@import "variables";
+@import "mixins";
+@import "containers";
+
+
+
+body {
+    font-family: "lunchtype22regular", sans-serif;
+    background-color: $color-main-orange;
+}
+
+
+.hideScroll {
+    overflow-y: hidden;
+}

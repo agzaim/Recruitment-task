@@ -21,6 +21,21 @@ module.exports = {
           // other vue-loader options go here
         }
       },
+      /*{ 
+        test: /\.woff(2)?(\?v=[0-9]\.[0-9]\.[0-9])?$/, 
+        loader: "url-loader?limit=10000&minetype=application/font-woff" 
+      },*/
+      /*{ test: /\.(png|woff|woff2|eot|ttf|svg)$/, 
+        loader: 'url-loader?limit=100000' 
+      },*/
+      /*{
+        test: /\.(eot|svg|ttf|woff|woff2)$/,
+        loader: 'file?name=public/fonts/[name].[ext]'
+      },*/
+      { 
+        test: /\.(ttf|otf|eot|svg|woff(2)?)(\?[a-z0-9]+)?$/,
+        loader: 'file-loader?name=fonts/[name].[ext]'
+      },
       {
         test: /\.js$/,
         loader: 'babel-loader',
@@ -38,6 +53,7 @@ module.exports = {
   resolve: {
     alias: {
       'vue$': 'vue/dist/vue.esm.js'
+//      '@': resolve('src')
     }
   },
   devServer: {

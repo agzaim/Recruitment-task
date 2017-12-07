@@ -1,4 +1,4 @@
-.modal-background {
+/*.modal-background {
     position: fixed;
     top: 0;
     right: 0;
@@ -28,8 +28,8 @@
         width: 100%;
         padding-bottom: 0;
         margin-bottom: 0;
-    }
-    p {
+    }*/
+//    p {
 //        font-size: 13px;
 //        font-family: lunchtype24expanded_medium, sans-serif;
 //        color: $color-grey-blue;
@@ -41,17 +41,17 @@
 //        @include mobiles {
 //            padding: 0 50px;
 //        }
-    }
-    h2 {
+//    }
+/*    h2 {
         font-family: $main-serif-font;
         font-size: 42px;
         font-weight: 500;
         color: $color-almost-black;
         letter-spacing: 1.5px;
     }
-}
+}*/
 
-.modal-subtitle {
+/*.modal-subtitle {
     font-size: 13px;
     font-family: lunchtype24expanded_medium, sans-serif;
     color: $color-grey-blue;
@@ -63,9 +63,9 @@
         @include mobiles {
             padding: 0 50px;
         }
-}
+}*/
 
-.close-mark {
+/*.close-mark {
     color: $color-grey-blue;
     float: right;
     font-size: 24px;
@@ -78,8 +78,9 @@
 .close-mark:focus {
     color: #000;
     cursor: pointer;
-}
+}*/
 
+/*
 
 .modal-header {
     border-bottom: 1px solid $color-grey-light;
@@ -116,9 +117,10 @@
         display: block;
     }
 }
+*/
 
 
-.user-data {
+/*.user-data {
     font-size: 13px;
     color: $color-grey-blue;
     font-family: $sans-serif-medium-font;
@@ -129,8 +131,8 @@
         @include mobiles {
             display: block;
         }
-    }
-    span {
+    }*/
+ /*   span {
         color: $color-almost-black;
         @include mobiles {
             display: block;
@@ -138,9 +140,9 @@
         }
     }
 }
+*/
 
-
-.ribbon-container {
+/*.ribbon-container {
     display: flex;
     justify-content: space-between;
     margin-left: 4px;
@@ -155,5 +157,5 @@
 .ribbon {
     height: 22px;
     width: 16px;
-}
+}*/
 

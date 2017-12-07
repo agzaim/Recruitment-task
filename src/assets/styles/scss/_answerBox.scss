@@ -1,8 +1,8 @@
-.answer-introduction {
+/*.answer-introduction {
     @include acivitiesFontStyle;
     color: $color-almost-black;
-}
-
+}*/
+/*
 .answer-section {
     margin-top: 40px;
     position: relative;
@@ -22,21 +22,21 @@
         box-shadow: 0 -9px 7px -7px $color-grey-light;
         display: block;
         border-bottom: $border-style;
-    }
-    .votes-box {
+    }*/
+   /* .votes-box {
             padding-top: 48px;
         @include mobiles {
             padding-top: 10px;
         }
-    }
+    }*/
 }
 
 
-.answer-introduction + .answer-section {
+/*.answer-introduction + .answer-section {
     margin-top: 17px;
-}
+}*/
 
-
+/*
 .answer-photo-box {
     width: 11%;
     padding-top: 20px;
@@ -44,9 +44,9 @@
     @include mobiles {
         padding-top: 10px;
     }
-}
+}*/
 
-
+/*
 .answer-box {
     margin-left: 11%;
     padding-top: 20px;
@@ -58,8 +58,8 @@
         border-left: 0;
         margin-left: 0;
          padding-left: 0;
-    }
-    .longer-text {
+    }*/
+    /*.longer-text {
         padding: 0 0 37px 0;
         width: auto;
         @include mobiles {
@@ -68,8 +68,8 @@
             margin-top: 10px;
             margin-bottom: 10px;
         }
-    }
-    p {
+    }*/
+    /*p {
         color: $color-grey-blue;
         font-size: 12px;
         padding-bottom: 15px;
@@ -77,13 +77,13 @@
               margin-left: 13%;
               padding-top: 5px;
         }
-    }
-    .user-name {
+    }*/
+/*    .answer-user-name {
         padding-right: 6px;
-    }
-}
+    }*/
+//}
 
-
+/*
 .middle-dot {
     font-weight: bold;
     padding-left: 7px;
@@ -93,16 +93,18 @@
 .answer-time {
     @include acivitiesFontStyle;
     padding-left: 7px;
-}
+}*/
 
 
+/*
 .empty-box {
     background-color: $color-main-background;
     width: 11%;
     border: 0;
 }
+*/
 
-
+/*
 .comment-container {
     margin-top: 0;
     box-shadow: 9px 0 5px -6px $color-grey-white;
@@ -115,11 +117,11 @@
         @include mobiles {
             left: 1%;
         }
-    }
-    .answer-box {
+    }*/
+    /*.answer-box {
         width: 55%;
         @include mobiles {
             width: 100%;
         }
-    }
-}
+    }*/
+//}

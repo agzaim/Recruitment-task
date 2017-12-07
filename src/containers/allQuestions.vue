@@ -1,26 +1,18 @@
 <template>
     <div>
-         
         <main-header></main-header>
         <div class="page-container">
             <div class="container">
-              
                 <question-box 
                     v-for="question in visibleQuestions" 
                     v-bind:key="question.questionID" 
                     v-bind:question="question">
                 </question-box>
-                 
                 <pagination-btn
-                    v-if="visibleQuestions.length < questions.length">
+                    v-if="moreToLoad">
                 </pagination-btn>
-
            </div>
         </div>
-        
-
-<!--<profileView v-if="showModal" v-on:close="showModal = false" v-bind:authorID="authorID"></profileView>-->
-    
     </div>
 </template>
 
@@ -55,24 +47,12 @@
 //                
 //                });
             
+            },
+            moreToLoad() {
+                return this.$store.state.moreToLoad;
             }
-           
             
             
-        },
-        data () {
-            return {
-                
-//                discussion: "discussion",
-//                peer: "peer",
-//                conversation: "conversation",
-//                showModal: false,
-                authorID: 0,
-              
-//                visibleQuestions: this.questions,
-//                slicer: 3,
-                moreToLoad: true
-            }
         },
         methods: {
           /*  loadingMore: function() {
@@ -117,10 +97,7 @@
 </script>
 
 <style lang="scss">
-    div {
-        a {
-            background-color: aqua;
-        }
+    
         
-    }
+    
 </style>

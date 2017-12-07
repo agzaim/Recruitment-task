@@ -22,10 +22,7 @@
                 v-bind:key="answer.author" 
                 v-bind:answer="answer">
             </answer-container>   
-        </div>
-  
-<!--    <profileView v-if="showModal" v-on:close="showModal = false" v-bind:authorID="authorID"></profileView>-->
-      
+        </div>    
     </div>
 </template>
 
@@ -37,20 +34,11 @@
      import answerContainer from "../components/answer-container.vue";
 
     export default {
-         props: {
-//            questions: {
-//                    type: Array,
-//                    required: true
-//            }
-        },
         data () {
             return {
                 id: "",
 //                id: this.$route.params.id,
-                peer: "peer",
-//                unfollowBtn: "unfollow",
-//                showModal: false,
-//                authorID: 0
+                peer: "peer"
             }
         },
         components: {
@@ -109,5 +97,24 @@
 
 </script>
 
-<style>
+<style lang="scss">
+    
+/*@import "../../scss/fonts.scss";
+@import "../../scss/mixins.scss";
+@import "../../scss/variables.scss"; */
+  
+/*@import "../assets/styles/scss/fonts.scss";*/
+@import "../assets/styles/scss/mixins.scss";
+@import "../assets/styles/scss/variables.scss";
+    
+.answer-introduction {
+    @include acivitiesFontStyle;
+    color: $color-almost-black;
+}
+    
+    
+.answer-introduction + .answer-section {
+    margin-top: 17px;
+}
+    
 </style>

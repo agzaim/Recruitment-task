@@ -19,9 +19,17 @@
     }
 </script>
 
-<style>
+<style lang="scss">
 
-    .modal-subtitle {
+/*@import "../../assets/styles/scss/fonts.scss";*/
+@import "../../assets/styles/scss/mixins.scss";
+@import "../../assets/styles/scss/variables.scss";
+    
+/*@import "../../../scss/fonts.scss";
+@import "../../../scss/mixins.scss";
+@import "../../../scss/variables.scss";*/
+    
+.modal-subtitle {
     font-size: 13px;
     font-family: lunchtype24expanded_medium, sans-serif;
     color: $color-grey-blue;
@@ -33,6 +41,6 @@
         @include mobiles {
             padding: 0 50px;
         }
-    }
+}
     
 </style>

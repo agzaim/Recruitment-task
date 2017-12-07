@@ -14,8 +14,8 @@ export const store = new Vuex.Store({
        visibleQuestions: [],
        chosenQuestion: {},
        chosenUser: {},
+       moreToLoad: true,
        showModal: false,
-//       authorID: "",
        slicer: 3,
        activeDateBtn: true,
        activeVoteBtn: false       
@@ -44,16 +44,24 @@ export const store = new Vuex.Store({
    },
     mutations: {
         loadingPartOfQuestions: state => {
+        
             var partOfQuestions = state.questions.slice(state.visibleQuestions.length, state.visibleQuestions.length + state.slicer);
 
             state.visibleQuestions = state.visibleQuestions.concat(partOfQuestions);
 //              this.sortByDate();
+            
+            
+             //hiding button
+            if(state.visibleQuestions.length >= state.questions.length) {
+                    state.moreToLoad = false;
+            }
         },
         
         searchingQuestions: (state, payload) => {
             state.visibleQuestions = state.questions.filter((quest) => {
                 return quest.question.toUpperCase().indexOf(payload.toUpperCase()) > -1;
             });
+            state.moreToLoad = false;
         },
         
         choosingQuestion: (state, payload) => {
@@ -90,7 +98,6 @@ export const store = new Vuex.Store({
             state.chosenUser = state.users.filter((user) => {
                     return user.authorID == payload;
                 })[0];
-//                state.authorID = payload;
         },
         
         closingModal: state => {

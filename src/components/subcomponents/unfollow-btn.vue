@@ -26,6 +26,24 @@
 
 </script>
 
-<style>
+<style lang="scss">
+    
+/*@import "../../assets/styles/scss/fonts.scss";*/
+@import "../../assets/styles/scss/mixins.scss";
 
+.unfollow-btn {   
+    position: absolute;
+    padding-top: 35px;
+    right: 70px;
+    font-weight: bold;
+    color: $color-blue-dark;
+    @include hoverEffect;
+    @include tabletsOnly {
+        right: 40px;
+    }
+    @include mobiles {
+        bottom: 39px;
+        left: 15px;
+    }
+}
 </style>
