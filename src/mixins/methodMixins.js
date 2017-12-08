@@ -8,9 +8,5 @@ export default {
                 return description + "s";
             }
          }
-//         modalTrigger: function(authorID) {
-//                this.showModal = true;
-//                this.authorID = authorID;
-//        }
      }
 }
