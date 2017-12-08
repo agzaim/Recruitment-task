@@ -33,11 +33,11 @@
      import singleQuestionBox from "../components/single-question-box.vue";
      import answerContainer from "../components/answer-container.vue";
 
+    
     export default {
         data () {
             return {
                 id: "",
-//                id: this.$route.params.id,
                 peer: "peer"
             }
         },
@@ -47,51 +47,18 @@
             "answerContainer": answerContainer
 
         },
-        methods: {
-            
-//            btnDescription: function(commentsList) {
-//               if(commentsList.length > 0) {
-//                   return "CONTINUE discussion";
-//               } else {
-//                   return "COMMENT";
-//               }        
-//            },
-            
-//            followToggler: function() {
-//                if (this.unfollowBtn == "unfollow") {
-//                    this.unfollowBtn = "follow";
-//                } else {
-//                    this.unfollowBtn = "unfollow";
-//                }
-//            },
-            
-//            votesCounter: function(votes) {
-//                return Math.abs(votes);
-//            },
-//            
-//            votesDescription: function(votes) {
-//                if (votes >= 0) {
-//                    return "upvotes";
-//                } else {
-//                    return "downvotes";
-//                }
-//            }
-        },
-        
+    
         computed: {
-//            question: function() {
-//                return this.questions.filter((quest) => {
-//                    return quest.questionID == this.id;
-//                })[0];
-//            }
             question() {
                 return this.$store.state.chosenQuestion;
             }
         },
+        
         beforeMount() {
             this.id = this.$route.params.id;
             this.$store.commit("choosingQuestion", this.id);
         },
+        
         mixins: [methodMixins]
     }
 
@@ -99,11 +66,7 @@
 
 <style lang="scss">
     
-/*@import "../../scss/fonts.scss";
-@import "../../scss/mixins.scss";
-@import "../../scss/variables.scss"; */
-  
-/*@import "../assets/styles/scss/fonts.scss";*/
+    
 @import "../assets/styles/scss/mixins.scss";
 @import "../assets/styles/scss/variables.scss";
     

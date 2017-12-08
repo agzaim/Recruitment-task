@@ -10,13 +10,13 @@
     import profileView from "./components/profile-view.vue";
 
     export default {
-        components: {
-            "profileView": profileView
-        },
         computed: {
             showModal() {
                 return this.$store.state.showModal;
             }
+        },
+        components: {
+            "profileView": profileView
         }
     }
 

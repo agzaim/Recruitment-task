@@ -26,11 +26,13 @@
                 required: true
             }
         },
+        
         filters: {
             votesCounter: function(votes) {
                 return Math.abs(votes);
             }
         },
+        
         methods: {
             votesDescription: function(votes) {
                 if (votes >= 0) {
@@ -46,16 +48,19 @@
 
 <style lang="scss">
     
-/*@import "../../assets/styles/scss/fonts.scss";*/
 @import "../../assets/styles/scss/mixins.scss";
 @import "../../assets/styles/scss/variables.scss";
     
 
 .votes-box {
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
     padding-top: 20px;
     margin: 0 auto;
     @include mobiles {
+        -webkit-box-pack: end;
+        -ms-flex-pack: end;
         justify-content: flex-end;
         padding: 10px 15px 32px 0;
     }

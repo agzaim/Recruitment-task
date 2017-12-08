@@ -17,14 +17,14 @@
          },
          methods: {
               btnDescription: function(comLength) {
-               if(comLength > 0) {
-                   return "CONTINUE discussion";
-               } if(comLength == 0) {
-                   return "COMMENT";
-               } else {
-                   return "GIVE new answer";
-               }     
-            }
+                   if(comLength > 0) {
+                       return "CONTINUE discussion";
+                   } if(comLength == 0) {
+                       return "COMMENT";
+                   } else {
+                       return "GIVE new answer";
+                   }     
+              }
          }
      }
 
@@ -32,11 +32,9 @@
 
 <style lang="scss">
     
-/*@import "../../assets/styles/scss/fonts.scss";*/
 @import "../../assets/styles/scss/mixins.scss";
 @import "../../assets/styles/scss/variables.scss";
-/*@import "../../../scss/fonts.scss";
-@import "../../../scss/mixins.scss";*/
+
     
 .btn-container {
     position: absolute;
@@ -58,4 +56,5 @@
         @include btnHoverEffect;
     }
 }
+    
 </style>

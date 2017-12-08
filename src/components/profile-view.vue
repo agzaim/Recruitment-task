@@ -140,20 +140,20 @@
             }
         },
         
-        methods: {
-            close() {
-                return this.$store.commit("closingModal");
-            }
-        },
-
-        computed: {
+         computed: {
             user() {
                 return this.$store.state.chosenUser;
             },
             users() {
                 return this.$store.state.users;
             }         
-        },  
+        },
+        
+        methods: {
+            close() {
+                return this.$store.commit("closingModal");
+            }
+        },
         
         components: {
             "userData": userData,
@@ -166,6 +166,8 @@
             "activitiesSummary": activitiesSummary
         },
             
+        mixins: [methodMixins],
+        
         
         //following 2 functions hiding and showing the main page scroll when modal is visible
         created() {
@@ -174,20 +176,14 @@
         
         beforeDestroy() {
             window.document.body.classList.remove("hideScroll");
-        },
-        
-        mixins: [methodMixins]
+        }
     }
 
 </script>
 
 <style lang="scss">
     
-/*@import "../../scss/fonts.scss";
-@import "../../scss/mixins.scss";
-@import "../../scss/variables.scss";*/
-   
-/*@import "../assets/styles/scss/fonts.scss";*/
+
 @import "../assets/styles/scss/mixins.scss";
 @import "../assets/styles/scss/variables.scss";
     
@@ -280,7 +276,11 @@
 
 
 .user-data-box {
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
+    -webkit-box-pack: justify;
+    -ms-flex-pack: justify;
     justify-content: space-between;
     @include mobiles {
         display: block;
@@ -290,8 +290,14 @@
     
 .modal-navigation-container {
     padding-top: 17px;
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
+    -webkit-box-pack: justify;
+    -ms-flex-pack: justify;
     justify-content: space-between;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
     align-items: center;
 }
     
@@ -308,8 +314,12 @@
 .statistics-squares-container {
     width: 72%;
     margin: 42px auto;
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
+    -ms-flex-pack: distribute;
     justify-content: space-around;
+    -ms-flex-wrap: wrap;
     flex-wrap: wrap;
     @include mobiles {
         width: 220px;
@@ -319,7 +329,11 @@
     
 .modal-user-container {
     width: 48%;
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
+    -webkit-box-pack: justify;
+    -ms-flex-pack: justify;
     justify-content: space-between;
     margin: 0 auto;
     margin-bottom: 20px;
@@ -352,6 +366,7 @@
     margin-bottom: 25px;
 }
     
+    
 .modal-footer {   
     .footer-subtitle {
         font-size: 11px;
@@ -361,14 +376,20 @@
     
     
 .footer-statistics-container {
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
+    -ms-flex-pack: distribute;
     justify-content: space-around;
     width: 67%;
     margin: 0 auto;
+    -ms-flex-wrap: wrap;
     flex-wrap: wrap;
     .activity-description {
         &:nth-child(3) {
             @include mobiles {
+                -webkit-box-ordinal-group: 4;
+                -ms-flex-order: 3;
                 order: 3;
             }
         }
@@ -382,9 +403,17 @@
     }
     @include mobiles {
         height: 55px;
+        -webkit-box-orient: vertical;
+        -webkit-box-direction: reverse;
+        -ms-flex-direction: column-reverse;
         flex-direction: column-reverse;
+        -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
         justify-content: space-between;
+        -webkit-box-align: start;
+        -ms-flex-align: start;
         align-items: flex-start;
+        -ms-flex-line-pack: justify;
         align-content: space-between;
     }
 }

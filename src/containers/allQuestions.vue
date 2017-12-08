@@ -11,7 +11,7 @@
                 <pagination-btn
                     v-if="moreToLoad">
                 </pagination-btn>
-           </div>
+            </div>
         </div>
     </div>
 </template>
@@ -24,69 +24,23 @@
     import paginationBtn from "../components/pagination-btn.vue";
 
     export default {
+    
+        computed: {
+            visibleQuestions() {
+                return this.$store.state.visibleQuestions;  
+            },
+            moreToLoad() {
+                return this.$store.state.moreToLoad;
+            }
+        },
+
         components: {
             "mainHeader": mainHeader,
             "questionBox": questionBox,
             "paginationBtn": paginationBtn
         },
-//        props: {
-//            questions: {
-//                type: Array,
-//                required: true
-//            }
-//        },
-        computed: {
-            questions() {
-                return this.$store.state.questions;
-            },
-            visibleQuestions() {
-                return this.$store.state.visibleQuestions;
-//                return 
-//                this.$store.state.questions.filter((quest) => {
-//                    return quest.question.toUpperCase().indexOf(this.search.toUpperCase()) > -1;
-//                
-//                });
-            
-            },
-            moreToLoad() {
-                return this.$store.state.moreToLoad;
-            }
-            
-            
-        },
-        methods: {
-          /*  loadingMore: function() {
-                //button for more loading won't be necessary when all questions will be shown
-                if(this.slicer >= this.questions.length) {
-                    this.moreToLoad = false;
-                }
-                this.visibleQuestions = this.questions.slice(0, this.slicer);
-                this.sortByDate();
-                this.slicer+=3;
-            },*/
-            
-//            searchQuestions: function() {
-//                this.visibleQuestions = this.visibleQuestions.filter((quest) => {
-//                    return quest.question.toUpperCase().indexOf(this.search.toUpperCase()) > -1;
-//                });
-//            },
-        /*    sortByDate: function() {
-                this.activeDateBtn = true;
-                this.activeVoteBtn = false;
-                this.visibleQuestions = this.visibleQuestions.sort((a, b) => {
-                    return b.publicationDate.localeCompare(a.publicationDate); 
-                });
-            },
-            sortByVotes: function() {
-                this.activeDateBtn = false;
-                this.activeVoteBtn = true;
-                this.visibleQuestions = this.visibleQuestions.sort((a, b) => {
-                    return b.votes - a.votes;
-                });
-            }*/
-        },
+        
         mixins: [methodMixins],
-
           
         beforeMount() {
             this.$store.commit("loadingPartOfQuestions");
@@ -97,7 +51,5 @@
 </script>
 
 <style lang="scss">
-    
-        
-    
+     
 </style>

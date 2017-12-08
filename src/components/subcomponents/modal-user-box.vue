@@ -30,11 +30,6 @@
 
 <style lang="scss">
     
-/*@import "../../../scss/fonts.scss";     
-@import "../../../scss/mixins.scss";
-@import "../../../scss/variables.scss";*/
-
-/*@import "../../assets/styles/scss/fonts.scss";*/
 @import "../../assets/styles/scss/mixins.scss";
 @import "../../assets/styles/scss/variables.scss";
     
@@ -42,7 +37,11 @@
     height: 90px;
     width: 90px;
     background-image: url(../../../items/skelatal_weave.png);
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
     align-items: center;
     margin-bottom: 5px;
 }

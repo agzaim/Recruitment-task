@@ -1,5 +1,4 @@
 <template>
-<!--    <div v-bind:class="{'header-title-box': mainHeader, 'single-title-box': singleQuestionHeader}">-->
     <div>
         <h3 class="header-title">QUESTIONS</h3> 
         <div class="plus-mark">+</div>
@@ -8,25 +7,12 @@
 
 <script>
 export default {
-    /*props: {
-        mainHeader: {
-            type: Boolean
-        },
-        singleQuestionHeader: {
-            type: Boolean
-        }
-    }*/
+
 }
 </script>
 
 <style lang="scss">
 
-/*@import "../../../scss/fonts.scss";
-@import "../../../scss/mixins.scss";
-@import "../../../scss/variables.scss";*/
- 
-    
-/*@import "../../assets/styles/scss/fonts.scss";*/
 @import "../../assets/styles/scss/mixins.scss";
 @import "../../assets/styles/scss/variables.scss";
     
@@ -79,4 +65,5 @@ export default {
     margin-left: 28px;
     font-weight: 100;
 }
+    
 </style>

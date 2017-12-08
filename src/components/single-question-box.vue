@@ -29,20 +29,20 @@
         data() {
             return {
                 btnValue: -1
-//                peer: "peer",
-//                conversation: "conversation"
             }
         },
+        
+        computed: {
+            question() {
+                return this.$store.state.chosenQuestion;
+            }
+        },
+        
         components: {
             "questionHeader": questionHeader,
             "unfollowBtn": unfollowBtn,
             "votesBox": votesBox,
             "reactionBtn": reactionBtn
-        },
-        computed: {
-            question() {
-                return this.$store.state.chosenQuestion;
-            }
         }
     }
 </script>
@@ -50,24 +50,19 @@
 
 <style lang="scss">
         
-/*@import "../../scss/fonts.scss";
-@import "../../scss/variables.scss";
-@import "../../scss/mixins.scss";*/
-    
-/*@import "../assets/styles/scss/fonts.scss";*/
 @import "../assets/styles/scss/mixins.scss";
 @import "../assets/styles/scss/variables.scss";
     
 .single-question-box {
     position: relative;
-/*    padding-bottom: 0;*/
     margin-bottom: 55px;
     border-bottom: $border-style;
-/*    border-top: 0;*/
 }
     
 .question-background {
     width: 100%;
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
     @include mobiles {
         display: block;

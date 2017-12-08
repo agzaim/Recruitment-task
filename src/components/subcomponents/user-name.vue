@@ -25,7 +25,6 @@
 
 <style lang="scss">
    
-/*@import "../../assets/styles/scss/fonts.scss";  */
 @import "../../assets/styles/scss/mixins.scss";
 @import "../../assets/styles/scss/variables.scss";
 

@@ -52,11 +52,6 @@
 
 <style lang="scss">
 
-/*@import "../../scss/fonts.scss";
-@import "../../scss/variables.scss";
-@import "../../scss/mixins.scss";*/
-  
-/*@import "../assets/styles/scss/fonts.scss";*/
 @import "../assets/styles/scss/mixins.scss";
 @import "../assets/styles/scss/variables.scss";
     
@@ -70,12 +65,16 @@
 }
 
 .answer-container {
+    -webkit-box-shadow: 9px -9px 5px -6px $color-grey-white;
     box-shadow: 9px -9px 5px -6px $color-grey-white;
     border: 0;
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
     position: relative;
     border-top: $border-style;
     @include mobiles {
+        -webkit-box-shadow: 0 -9px 7px -7px $color-grey-light;
         box-shadow: 0 -9px 7px -7px $color-grey-light;
         display: block;
         border-bottom: $border-style;
@@ -102,6 +101,7 @@
     
 .comment-container {
     margin-top: 0;
+    -webkit-box-shadow: 9px 0 5px -6px $color-grey-white;
     box-shadow: 9px 0 5px -6px $color-grey-white;
     border-top: $border-style;
     @include mobiles {
@@ -114,4 +114,5 @@
         }
     }
 }
+    
 </style>

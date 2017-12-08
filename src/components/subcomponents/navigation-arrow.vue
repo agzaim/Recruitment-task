@@ -10,13 +10,9 @@
 <style lang="scss">
   
     
-/*@import "../../assets/styles/scss/fonts.scss";*/
 @import "../../assets/styles/scss/mixins.scss";
 @import "../../assets/styles/scss/variables.scss";
     
-/*@import "../../../scss/fonts.scss";
-@import "../../../scss/mixins.scss";
-@import "../../../scss/variables.scss";*/
     
 .left-arrow {
     position: absolute;
@@ -48,4 +44,5 @@
         margin-top: 4px;
     }
 }
+    
 </style>

@@ -23,11 +23,7 @@ export default {
 
 <style lang="scss">
 
-/*@import "../../assets/styles/scss/fonts.scss";*/
 @import "../../assets/styles/scss/mixins.scss";
-    /*
-@import "../../../scss/fonts.scss";
-@import "../../../scss/mixins.scss";*/
 
 .user-photo {
     height: 53px;

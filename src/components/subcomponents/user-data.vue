@@ -35,7 +35,6 @@
 
 <style lang="scss">
     
-/*@import "../../assets/styles/scss/fonts.scss";*/
 @import "../../assets/styles/scss/mixins.scss";
 @import "../../assets/styles/scss/variables.scss";
     
@@ -46,6 +45,8 @@
     text-align: center;
     font-family: lunchtype24expanded_medium, sans-serif;
     &:last-child {
+        display: -webkit-box;
+        display: -ms-flexbox;
         display: flex;
         @include mobiles {
             display: block;
@@ -64,7 +65,11 @@
    
     
 .ribbon-container {
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
+    -webkit-box-pack: justify;
+    -ms-flex-pack: justify;
     justify-content: space-between;
     margin-left: 4px;
     width: 63px;

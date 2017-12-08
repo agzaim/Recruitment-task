@@ -2,7 +2,6 @@
     <header>
         <navigation-arrow></navigation-arrow>
         <div class="container header-container">
-<!--            <header-title v-bind:mainHeader="classBind"></header-title>-->
              <header-title class="header-title-box">
              </header-title>
              <div class="header-view-buttons">
@@ -54,7 +53,6 @@
                 myShelf: "myShelf",
                 allQuestions: "allQuestions",
                 checked: true,
-//                classBind: true,
                 date: "byDate",
                 votes: "byVotes"
             }
@@ -67,7 +65,6 @@
             "sortingChoice": sortingChoice
         },
         
-
         computed: {
             activeDateBtn() {
                 return this.$store.state.activeDateBtn;
@@ -75,25 +72,11 @@
             activeVoteBtn() {
                 return this.$store.state.activeVoteBtn;
             }
-//            visibleQuestions() {
-//                this.$store.state.visibleQuestions.filter((quest) => {
-//                    return quest.question.toUpperCase().indexOf(this.search.toUpperCase()) > -1;
-//                });
-//            }
         },
-        methods: {
-//            searchQuestions() {
-//                this.$store.state.visibleQuestions = this.$store.state.questions.filter((quest) => {
-//                    return quest.question.toUpperCase().indexOf(this.search.toUpperCase()) > -1;
-//            });
-                
-                
-                
+        
+        methods: {    
             searchQuestions(searchWord) {
-                this.$store.commit("searchingQuestions", searchWord);
-//                this.$store.state.visibleQuestions = this.$store.state.questions.filter((quest) => {
-//                    return quest.question.toUpperCase().indexOf(this.search.toUpperCase()) > -1;
-//                });
+                this.$store.commit("searchingQuestions", searchWord);       
             }
         }
     }
@@ -101,11 +84,7 @@
 
 <style lang="scss">
     
-/*@import "../../scss/fonts.scss";
-@import "../../scss/mixins.scss";
-@import "../../scss/variables.scss";*/
- 
-/*@import "../assets/styles/scss/fonts.scss";*/
+
 @import "../assets/styles/scss/mixins.scss";
 @import "../assets/styles/scss/variables.scss";
     
@@ -122,6 +101,7 @@ header {
     
 .header-container {
     border: 0;
+    -webkit-box-shadow: 0 0 0 0;
     box-shadow: 0 0 0 0;
     @include mediaHeader {
         width: 90%;
@@ -202,4 +182,5 @@ header {
         margin-top: 10px;
     }
 }
+    
 </style>

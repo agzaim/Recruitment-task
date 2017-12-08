@@ -10,9 +10,7 @@
                 </user-name>
                 IS ASKING:
             </p>
-            <router-link v-bind:to="'/question/' + question.questionID" >
-                         
-<!--                         v-on:click.native="choosingQuestion(question.questionID)">-->
+            <router-link v-bind:to="'/question/' + question.questionID">
                 <h4 class="question-text">
                     {{ question.question }}
                 </h4>
@@ -45,13 +43,7 @@
 </script>
 
 <style lang="scss">
-    
-/*@import "../../../scss/fonts.scss";
-@import "../../../scss/mixins.scss";
-@import "../../../scss/variables.scss";*/
-    
-    
-/*@import "../../assets/styles/scss/fonts.scss";*/
+
 @import "../../assets/styles/scss/mixins.scss";
 @import "../../assets/styles/scss/variables.scss";
     
@@ -95,6 +87,7 @@
 .single-question-box-header {
     width: 100%;
     @include mobiles {
+        -webkit-box-shadow: 0 8px 7px -7px $color-grey-light inset;
         box-shadow: 0 8px 7px -7px $color-grey-light inset;
     }
     @include mobiles {
@@ -124,4 +117,5 @@
         top: 20px;
     }
 }
+    
 </style>

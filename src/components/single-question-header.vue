@@ -4,8 +4,6 @@
             <navigation-arrow></navigation-arrow>
         </router-link>
         <div class="container sng-header-container">
-            <!--<header-title v-bind:singleQuestionHeader="classBind">
-            </header-title>-->
             <header-title class="single-title-box">
             </header-title>
             <p class="discussion-timer">
@@ -27,30 +25,22 @@
     import headerTitle from "./subcomponents/header-title.vue";
  
     export default {
-        /*data() {
-            return {
-                classBind: true
-            }
-        },*/
+ 
         computed: {
             question() {
                 return this.$store.state.chosenQuestion;
             }
         },
+        
         components: {
             "navigationArrow": navigationArrow,
             "headerTitle": headerTitle   
         }
-}
+    }
 </script>
 
 <style lang="scss">
     
-/*@import "../../scss/fonts.scss";
-@import "../../scss/mixins.scss";
-@import "../../scss/variables.scss";*/
- 
-/*@import "../assets/styles/scss/fonts.scss";*/
 @import "../assets/styles/scss/mixins.scss";
 @import "../assets/styles/scss/variables.scss";
     

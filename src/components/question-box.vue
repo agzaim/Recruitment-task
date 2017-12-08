@@ -25,14 +25,17 @@
                 </user-activity>     
             </div>
             <div class="question-box-summary">
-                <activities-summary v-bind:quantity="question.relatedDiscussions" 
-                                    v-bind:description="discussion">
+                <activities-summary 
+                        v-bind:quantity="question.relatedDiscussions" 
+                        v-bind:description="discussion">
                 </activities-summary>
-                <activities-summary v-bind:quantity="question.peersInvolved" 
-                                    v-bind:description="peer">
+                <activities-summary 
+                        v-bind:quantity="question.peersInvolved" 
+                        v-bind:description="peer">
                 </activities-summary>
-                <activities-summary v-bind:quantity="question.conversations"
-                                    v-bind:description="conversation">
+                <activities-summary 
+                        v-bind:quantity="question.conversations"
+                        v-bind:description="conversation">
                 </activities-summary>
             </div> 
         </div> 
@@ -64,29 +67,13 @@
             "questionHeader": questionHeader,
             "userActivity": userActivity,
             "activitiesSummary": activitiesSummary
-        },
-        computed: {
-            
-//            questions() {
-//                return this.$store.state.questions;
-//            },
-//            visibleQuestions() {
-//                return this.$store.getters.visibleQuestions;
-//            }
-            
-            
         }
     }
 </script>
 
 <style lang="scss">
 
-/*@import "../../scss/fonts.scss";   
-@import "../../scss/mixins.scss";
-@import "../../scss/variables.scss";*/ 
-  
-    
-/*@import "../assets/styles/scss/fonts.scss";*/
+
 @import "../assets/styles/scss/mixins.scss";
 @import "../assets/styles/scss/variables.scss";
     
@@ -98,13 +85,19 @@
     
     
 .question-box-content {
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
+    -webkit-box-pack: start;
+    -ms-flex-pack: start;
     justify-content: flex-start;
 }
 
     
 .user-activities-container {
     width: 76%;
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
     @include smallTablets {
          width: 70%;
@@ -133,9 +126,18 @@
     
 .question-box-summary {
     margin-top: 30px;
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
+    -webkit-box-pack: justify;
+    -ms-flex-pack: justify;
     justify-content: space-between;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-flow: column;
     flex-flow: column;
+    -webkit-box-align: start;
+    -ms-flex-align: start;
     align-items: flex-start;
     padding-left: 60px;
     @include tablets {

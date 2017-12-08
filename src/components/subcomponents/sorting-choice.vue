@@ -29,15 +29,10 @@ export default {
 
 <style lang="scss">
     
-/*@import "../../assets/styles/scss/fonts.scss";*/
 @import "../../assets/styles/scss/mixins.scss";
 @import "../../assets/styles/scss/variables.scss";
-/*    
-@import "../../../scss/fonts.scss";
-@import "../../../scss/mixins.scss";
-@import "../../../scss/variables.scss";*/
-    
 
+    
 .sorting-choice {
     font-family: "lunchtype22regular", sans-serif;
     margin-left: 7px;

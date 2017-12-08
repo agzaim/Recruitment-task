@@ -37,12 +37,6 @@
 
 <style lang="scss">
     
-/*@import "../../../scss/fonts.scss";
-@import "../../../scss/mixins.scss";
-@import "../../../scss/variables.scss";*/
-  
-    
-/*@import "../../assets/styles/scss/fonts.scss";*/
 @import "../../assets/styles/scss/mixins.scss";
 @import "../../assets/styles/scss/variables.scss";
     
@@ -103,4 +97,5 @@
             margin-bottom: 10px;
         }
 }
+    
 </style>
